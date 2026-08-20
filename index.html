@@ -35,7 +35,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- JSON-LD: Person -->
 <script type="application/ld+json">
@@ -139,12 +139,12 @@ html{scroll-behavior:smooth}
 body{
   background:var(--cream);
   color:var(--ink);
-  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-family:'Work Sans',system-ui,-apple-system,sans-serif;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
-h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-0.02em}
+h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-0.02em}
 a{color:inherit}
 img{max-width:100%;display:block}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
@@ -154,7 +154,7 @@ img{max-width:100%;display:block}
 /* Header */
 header{position:sticky;top:0;z-index:100;background:rgba(241,235,223,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;text-decoration:none;color:var(--ink)}
+.brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.15rem;text-decoration:none;color:var(--ink)}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
 .nav-links a{text-decoration:none;font-size:0.92rem;font-weight:500;color:var(--ink)}
 .nav-links a:hover{color:var(--accent)}
@@ -167,19 +167,27 @@ header{position:sticky;top:0;z-index:100;background:rgba(241,235,223,0.92);backd
 
 /* Hero */
 .hero{padding:88px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start}
+.hero-copy{min-width:0}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
 .eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent)}
 .hero h1{font-size:clamp(2.2rem,5.5vw,4.2rem);line-height:1.05;margin-bottom:28px;max-width:16ch}
 .hero h1 em{color:var(--accent);font-style:normal}
 .hero p.lede{font-size:1.1rem;color:#3c372c;max-width:620px;margin-bottom:36px}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--rule)}
+.hero-card{display:flex;flex-direction:column;background:var(--dark);color:var(--cream);border-radius:var(--radius);padding:30px 26px;text-decoration:none;margin-top:8px;transform:rotate(1.5deg);transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 18px 40px -20px rgba(20,17,9,0.55)}
+.hero-card:hover{transform:rotate(0deg) translateY(-3px);box-shadow:0 24px 48px -18px rgba(20,17,9,0.65)}
+.hero-card-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:3.4rem;line-height:1;color:var(--accent)}
+.hero-card-num span{color:var(--cream)}
+.hero-card-label{font-size:0.9rem;color:#cfc6b2;margin-top:14px;line-height:1.5}
+.hero-card-tag{margin-top:20px;padding-top:16px;border-top:1px solid #322c1f;font-size:0.75rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:#e5c68f}
 
 /* Stats / receipts */
 .receipts{padding:64px 0;background:var(--dark);color:var(--cream)}
 .receipts .section-label{color:#a89f8c}
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2a251c;margin-top:40px;border-radius:var(--radius);overflow:hidden}
 .stat{background:var(--dark);padding:32px 28px}
-.stat-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.2rem;color:var(--cream)}
+.stat-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:2.2rem;color:var(--cream)}
 .stat-num span{color:var(--accent)}
 .stat-label{font-size:0.85rem;color:#a89f8c;margin-top:8px;line-height:1.5}
 
@@ -197,17 +205,19 @@ header{position:sticky;top:0;z-index:100;background:rgba(241,235,223,0.92);backd
 .pillar p{font-size:0.9rem;color:var(--muted)}
 
 /* Case studies */
-.case{border-top:1px solid var(--rule);padding:48px 0;display:grid;grid-template-columns:220px 1fr;gap:40px}
+.case{border-top:1px solid var(--rule);padding:48px 0;display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;position:relative}
 .case:last-child{border-bottom:1px solid var(--rule)}
-.case-meta{font-size:0.78rem;color:var(--muted)}
-.case-meta .tag{display:inline-block;background:var(--cream2);border-radius:100px;padding:4px 12px;font-weight:600;margin-bottom:8px;letter-spacing:0.03em;text-transform:uppercase;font-size:0.7rem}
+.case-meta{font-size:0.78rem;color:var(--muted);position:relative;align-self:stretch;display:flex;flex-direction:column}
+.case-index{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:4.4rem;line-height:0.85;color:transparent;-webkit-text-stroke:1.5px var(--rule);letter-spacing:-0.03em;margin-bottom:14px}
+.case-index::after{content:'';display:block;width:34px;height:4px;background:var(--accent);margin-top:16px;border-radius:2px}
+.case-meta .tag{display:inline-block;background:var(--cream2);border-radius:100px;padding:4px 12px;font-weight:600;margin-bottom:8px;letter-spacing:0.03em;text-transform:uppercase;font-size:0.7rem;align-self:flex-start}
 .case-meta .award{background:#f4e2c8;color:#8a5a00}
 .case h3{font-size:1.4rem;margin:10px 0 4px}
 .case-body dl{display:grid;gap:14px;margin:20px 0}
 .case-body dt{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
 .case-body dd{color:#3c372c}
 .case-results{display:flex;flex-wrap:wrap;gap:28px;margin-top:20px}
-.res-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.3rem}
+.res-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.3rem}
 .res-label{font-size:0.75rem;color:var(--muted)}
 
 /* Team / difference */
@@ -215,7 +225,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(241,235,223,0.92);backd
 .team-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:start}
 .team-proof{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
 .proof-item{background:var(--cream);border:1px solid var(--rule);border-radius:var(--radius);padding:20px}
-.proof-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem}
+.proof-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.5rem}
 .proof-label{font-size:0.78rem;color:var(--muted);margin-top:4px}
 .chip-row{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:1px solid var(--rule);border-radius:100px;padding:8px 16px;font-size:0.82rem;background:var(--cream)}
@@ -223,7 +233,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(241,235,223,0.92);backd
 /* Process */
 .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden;margin-top:40px}
 .process-step{background:var(--cream);padding:32px 28px}
-.process-step .num{font-family:'Space Grotesk',sans-serif;color:var(--accent);font-weight:700;font-size:0.85rem;letter-spacing:0.05em;margin-bottom:16px}
+.process-step .num{font-family:'Bricolage Grotesque',sans-serif;color:var(--accent);font-weight:700;font-size:0.85rem;letter-spacing:0.05em;margin-bottom:16px}
 .process-step h3{font-size:1.05rem;margin-bottom:10px}
 .process-step p{font-size:0.9rem;color:var(--muted)}
 
@@ -235,7 +245,10 @@ header{position:sticky;top:0;z-index:100;background:rgba(241,235,223,0.92);backd
 
 /* About */
 .about-grid{display:grid;grid-template-columns:0.9fr 1.4fr;gap:60px;align-items:start}
-.about-photo{aspect-ratio:3/4;background:var(--cream2);border:1px solid var(--rule);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:700;color:var(--rule)}
+.about-photo{aspect-ratio:3/4;background:var(--dark);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden}
+.about-photo::before{content:'';position:absolute;inset:0;background:linear-gradient(155deg,var(--accent) 0%,transparent 45%);opacity:0.35}
+.about-photo-mono{font-family:'Bricolage Grotesque',sans-serif;font-size:4rem;font-weight:800;color:var(--cream);letter-spacing:-0.03em;position:relative}
+.about-photo-role{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#e5c68f;position:relative}
 .award-list{margin-top:18px;display:flex;flex-direction:column;gap:10px}
 .award-item{display:flex;gap:10px;align-items:center;background:#f4e2c8;border:1px solid #e5c68f;border-radius:8px;padding:12px 14px;font-size:0.85rem;font-weight:600;color:#6b4a00}
 .about-bio p{margin-bottom:16px;color:#3c372c}
@@ -297,7 +310,13 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
   .pillars,.process-grid{grid-template-columns:1fr 1fr}
   .team-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
   .case{grid-template-columns:1fr;gap:16px}
+  .case-meta{flex-direction:row;align-items:center;gap:14px;padding-top:14px;flex-wrap:wrap}
+  .case-index{font-size:2.4rem;margin-bottom:0;display:flex;align-items:center;gap:10px}
+  .case-index::after{margin-top:0;width:4px;height:22px}
   .stat-grid{grid-template-columns:1fr 1fr}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-card{transform:none;max-width:340px}
+  .hero-card:hover{transform:translateY(-3px)}
 }
 @media (max-width:560px){
   .pillars,.process-grid,.stat-grid{grid-template-columns:1fr}
@@ -335,14 +354,21 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
 <main id="main">
   <!-- HERO -->
   <section class="hero" id="top">
-    <div class="container">
-      <p class="eyebrow">Available for consulting &amp; fractional leadership</p>
-      <h1>Campaigns that trend nationally. <em>Systems that scale brands.</em></h1>
-      <p class="lede">Marketing &amp; digital transformation leader. 10+ years across India &amp; APAC, working with Ford, Amazon, CoinDCX, Tata &amp; 30+ more — on campaign strategy and on the CRM and marketing-ops systems that make brands run smarter.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Work with me</a>
-        <a class="btn btn-ghost" href="#receipts">See the proof ↓</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Available for consulting &amp; fractional leadership</p>
+        <h1>Campaigns that trend nationally. <em>Systems that scale brands.</em></h1>
+        <p class="lede">Marketing &amp; digital transformation leader. 10+ years across India &amp; APAC, working with Ford, Amazon, CoinDCX, Tata &amp; 30+ more — on campaign strategy and on the CRM and marketing-ops systems that make brands run smarter.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Work with me</a>
+          <a class="btn btn-ghost" href="#receipts">See the proof ↓</a>
+        </div>
       </div>
+      <a class="hero-card" href="#receipts" aria-label="See the proof behind this number">
+        <span class="hero-card-num">9.9<span>M</span></span>
+        <span class="hero-card-label">People reached by a single question — CoinDCX's #BitcoinLiyaKya, one campaign, one nation talking.</span>
+        <span class="hero-card-tag">★ Mommy Award winner</span>
+      </a>
     </div>
   </section>
 
@@ -352,12 +378,12 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
       <p class="section-label">The receipts</p>
       <h2 style="max-width:22ch">What the work actually did</h2>
       <div class="stat-grid">
-        <div class="stat"><div class="stat-num">9.9<span>M</span></div><div class="stat-label">People reached by a single question — CoinDCX #BitcoinLiyaKya</div></div>
-        <div class="stat"><div class="stat-num">3<span>M+</span></div><div class="stat-label">App downloads from one campaign — CoinDCX, 2021</div></div>
-        <div class="stat"><div class="stat-num">₹12<span>Cr</span></div><div class="stat-label">Earned media value, one cause campaign — Himalayan, Khardung La</div></div>
-        <div class="stat"><div class="stat-num">150<span>+</span></div><div class="stat-label">Households given water access via a funded reservoir — Leh, Himalayan 2022</div></div>
-        <div class="stat"><div class="stat-num">1<span>st</span></div><div class="stat-label">Crypto title sponsor in cricket history — CoinDCX × IND v SL T20</div></div>
-        <div class="stat"><div class="stat-num">2 <span>Awards</span></div><div class="stat-label">Mommy Award &amp; Realty+ Award winner — CoinDCX, M3M India</div></div>
+        <div class="stat"><div class="stat-num">9.9<span>M</span></div><div class="stat-label">People reached by a single question · CoinDCX #BitcoinLiyaKya</div></div>
+        <div class="stat"><div class="stat-num">3<span>M+</span></div><div class="stat-label">App downloads from one campaign · CoinDCX, 2021</div></div>
+        <div class="stat"><div class="stat-num">₹12<span>Cr</span></div><div class="stat-label">Earned media value, one cause campaign · Himalayan, Khardung La</div></div>
+        <div class="stat"><div class="stat-num">150<span>+</span></div><div class="stat-label">Households given water access via a funded reservoir · Leh, Himalayan 2022</div></div>
+        <div class="stat"><div class="stat-num">1<span>st</span></div><div class="stat-label">Crypto title sponsor in cricket history · CoinDCX × IND v SL T20</div></div>
+        <div class="stat"><div class="stat-num">2 <span>Awards</span></div><div class="stat-label">Mommy Award &amp; Realty+ Award winner · CoinDCX, M3M India</div></div>
       </div>
     </div>
   </section>
@@ -390,6 +416,7 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
 
       <article class="case reveal">
         <div class="case-meta">
+          <div class="case-index">01</div>
           <span class="tag">Digital transformation · Automotive</span>
           <div>WPP / VML · 2024–Now</div>
         </div>
@@ -410,6 +437,7 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
 
       <article class="case reveal">
         <div class="case-meta">
+          <div class="case-index">02</div>
           <span class="tag">Social at scale · Automotive</span>
           <div>Cheil X · 2024</div>
         </div>
@@ -429,6 +457,7 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
 
       <article class="case reveal">
         <div class="case-meta">
+          <div class="case-index">03</div>
           <span class="tag award">★ Mommy Award</span>
           <div>Schbang · 2021–2023</div>
         </div>
@@ -450,6 +479,7 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
 
       <article class="case reveal">
         <div class="case-meta">
+          <div class="case-index">04</div>
           <span class="tag">Cause · FMCG / Tata Consumer</span>
           <div>Schbang · 2022</div>
         </div>
@@ -471,6 +501,7 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
 
       <article class="case reveal">
         <div class="case-meta">
+          <div class="case-index">05</div>
           <span class="tag">Integrated · E-commerce</span>
           <div>Schbang · 2021–22</div>
         </div>
@@ -491,6 +522,7 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
 
       <article class="case reveal">
         <div class="case-meta">
+          <div class="case-index">06</div>
           <span class="tag award">★ Realty+ Award</span>
           <div>Schbang · Real estate</div>
         </div>
@@ -506,6 +538,7 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
 
       <article class="case reveal">
         <div class="case-meta">
+          <div class="case-index">07</div>
           <span class="tag">Festive · Home security</span>
           <div>Schbang</div>
         </div>
@@ -591,10 +624,13 @@ footer{padding:36px 0;font-size:0.82rem;color:var(--muted)}
     <div class="container">
       <div class="about-grid">
         <div class="reveal">
-          <div class="about-photo" aria-hidden="true">PJ</div>
+          <div class="about-photo" aria-hidden="true">
+            <span class="about-photo-mono">PJ</span>
+            <span class="about-photo-role">Delhi/NCR</span>
+          </div>
           <div class="award-list">
-            <div class="award-item">★ Mommy Award — CoinDCX #BitcoinLiyaKya</div>
-            <div class="award-item">★ Realty+ Award — M3M India No Means No</div>
+            <div class="award-item">★ Mommy Award · CoinDCX #BitcoinLiyaKya</div>
+            <div class="award-item">★ Realty+ Award · M3M India No Means No</div>
           </div>
         </div>
         <div class="reveal about-bio">

@@ -322,6 +322,7 @@ var button=document.getElementById('menuButton'),nav=document.getElementById('na
 button.addEventListener('click',function(){var open=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(open));button.textContent=open?'Close ×':'Menu ☰';});
 nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.textContent='Menu ☰';});});
 window.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.textContent='Menu ☰';button.focus();}});
+document.querySelectorAll('.case-photo img').forEach(function(photo){photo.addEventListener('error',function(){var figure=photo.closest('figure');if(figure)figure.hidden=true;});});
 var cookie=document.getElementById('cookie'),consentKey='pj_analytics_choice_v1',analyticsLoaded=false;
 function loadAnalytics(){if(analyticsLoaded)return;analyticsLoaded=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-XV39SFSW40',{anonymize_ip:true});var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-XV39SFSW40';document.head.appendChild(s);}
 function closeChoice(value){try{localStorage.setItem(consentKey,value);}catch(e){}cookie.hidden=true;if(value==='yes')loadAnalytics();}

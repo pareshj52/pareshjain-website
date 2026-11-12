@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#17140f"/>
-  <text x="32" y="43" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="26" fill="#f1ebdf" text-anchor="middle">PJ</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="PJ"><rect width="100" height="100" rx="14" fill="#171715"/><path d="M22 27H42C59 27 65 36 65 46C65 57 57 64 41 64H36V78H22V27ZM36 40V51H41C46 51 50 50 50 45S46 40 41 40H36Z" fill="#F6F4EE"/><path d="M64 27H79V62C79 76 70 83 55 83V69C62 69 64 67 64 60V27Z" fill="#C7F163"/></svg>

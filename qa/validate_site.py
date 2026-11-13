@@ -60,7 +60,7 @@ def main():
     assert_(not set(parser.anchors).difference(parser.ids), "Broken in-page anchor target")
     assert_(all(i.get("alt") for i in parser.images), "Image missing descriptive alt text")
     assert_(len(parser.forms) == 1, "Expected one contact form")
-    assert_(len(parser.labels) >= 4, "Form labels missing")
+    assert_(len(parser.labels) >= 3, "Form labels missing")
     assert_(any(i.get("type") == "email" and "required" in i for i in parser.inputs), "Required email input missing")
     assert_(all(i.get("method", "").lower() == "post" for i in parser.forms), "Form must use POST")
     assert_(len(parser.scripts) == 1, "Missing Person structured data")

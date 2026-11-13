@@ -3,11 +3,125 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/work.html",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/work",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/accessibility.html",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/robots.html",
+      "destination": "/robots.txt",
+      "permanent": true
+    },
+    {
+      "source": "/campaign-ford.html",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/campaign-amazon.html",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/campaign-coindcx.html",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/campaign-himalayan.html",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/campaign-mg.html",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/campaign-bata.html",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/campaign-m3m.html",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/campaign-tatagluco.html",
+      "destination": "/#work",
+      "permanent": true
     }
   ]
 }
-

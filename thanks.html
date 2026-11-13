@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brief received | Paresh Jain</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1E2448">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+
+<!-- Keep these IDs the same as on index.html -->
+<script>window.PJ = { GA4: 'G-XV39SFSW40', META_PIXEL: '' };</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XV39SFSW40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', PJ.GA4);
+  if (PJ.META_PIXEL) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PJ.META_PIXEL); fbq('track', 'PageView');
+  }
+  // Count the lead once per submitted brief (not on refresh or direct visits)
+  (function(){
+    var fresh=false;
+    try{ fresh = sessionStorage.getItem('pj_lead')==='1'; sessionStorage.removeItem('pj_lead'); }catch(e){}
+    if(fresh){
+      gtag('event','generate_lead',{method:'brief_form'});
+      if(window.fbq && PJ.META_PIXEL) fbq('track','Lead');
+    }
+  })();
+</script>
+<style>
+:root{--indigo:#1E2448;--ink:#141830;--indigo-2:#2A315C;--saffron:#FF9E2C;--saffron-2:#FFB45C;--f:"Archivo",ui-sans-serif,system-ui,sans-serif;--g:clamp(1.25rem,4vw,4rem)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;background:var(--indigo);color:#fff;font-family:var(--f);font-size:1.0625rem;line-height:1.55;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 var(--g);width:100%}
+header .wrap{height:5.5rem;display:flex;align-items:center}
+header a{text-decoration:none;font-weight:600}
+main{flex:1;display:flex;align-items:center;padding:2rem 0 4rem}
+h1{font-size:clamp(3rem,9vw,7.5rem);line-height:.92;letter-spacing:-.05em;font-weight:500;margin:0 0 2rem}
+.lead{font-size:clamp(1.2rem,2vw,1.6rem);max-width:32ch;margin:0 0 3rem;color:#DCE0EE}
+ol{list-style:none;margin:0 0 3rem;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;border-top:1px solid #454C7A;padding-top:1.5rem}
+ol li{color:#C5CADD}
+ol b{display:block;color:#fff;font-weight:600;margin-bottom:.35rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:3.25rem;padding:0 1.6rem;border-radius:999px;border:1.5px solid transparent;font-weight:600;text-decoration:none}
+.btn-sun{background:var(--saffron);color:var(--ink)}
+.btn-sun:hover{background:var(--saffron-2)}
+.btn-line{border-color:#fff}
+.btn-line:hover{background:#fff;color:var(--ink)}
+@media (max-width:700px){ol{grid-template-columns:1fr;gap:1.25rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="/">Paresh Jain</a></div></header>
+<main>
+  <div class="wrap">
+    <h1>Brief received.<br>Thank you.</h1>
+    <p class="lead">I read every brief myself and reply within one working day.</p>
+    <ol>
+      <li><b>I read your brief</b>and note anything I need to check before we talk.</li>
+      <li><b>I reply by email</b>with questions or a suggested call time.</li>
+      <li><b>We talk for 20 minutes</b>and I tell you honestly if I can help.</li>
+    </ol>
+    <div class="btns">
+      <a class="btn btn-sun" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1380Zcu-WXHLTQi5dZqrbtbLfTN_Pl_yzwDjDL7QWRDAgHdRhg_jQIUqrLBvdR7pw_g4_Txei-" target="_blank" rel="noopener" id="book">Skip the wait: book a 20-min call</a>
+      <a class="btn btn-line" href="https://wa.me/919999896986?text=Hi%20Paresh%2C%20I%20just%20sent%20you%20a%20brief." target="_blank" rel="noopener" id="wa">Message on WhatsApp</a>
+    </div>
+  </div>
+</main>
+<script>
+document.getElementById('book').addEventListener('click',function(){ try{ gtag('event','call_click',{cta:'thanks_call'}); if(window.fbq&&PJ.META_PIXEL) fbq('track','Schedule'); }catch(e){} });
+document.getElementById('wa').addEventListener('click',function(){ try{ gtag('event','whatsapp_click',{cta:'thanks_whatsapp'}); if(window.fbq&&PJ.META_PIXEL) fbq('track','Contact'); }catch(e){} });
+</script>
+</body>
+</html>

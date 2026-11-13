@@ -33,6 +33,12 @@ with sync_playwright() as p:
             assert page.locator(".contact .email-link").count() == 1, f"{name}: contact fallback"
             assert page.locator(".brief-form").evaluate("(form) => !form.checkValidity()"), f"{name}: required contact fields"
             overflow = page.evaluate("document.documentElement.scrollWidth - window.innerWidth")
+            if overflow > 2:
+                offenders = page.evaluate("""() => Array.from(document.querySelectorAll('body *')).map(el => {
+                    let b=el.getBoundingClientRect();
+                    return {tag:el.tagName, cls:String(el.className).slice(0,90), right:Math.round(b.right), left:Math.round(b.left), width:Math.round(b.width)};
+                }).filter(x => x.right > innerWidth + 2 || x.left < -2).slice(0,20)""")
+                print("OVERFLOW_DIAGNOSTIC", name, offenders, flush=True)
             assert overflow <= 2, f"{name}: horizontal overflow {overflow}px"
             assert not errors, f"{name}: JS errors {errors}"
             if name in ("desktop","mobile"):

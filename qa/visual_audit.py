@@ -30,6 +30,7 @@ with sync_playwright() as p:
             assert page.locator("h1").count() == 1, f"{name}: heading count"
             assert page.locator("article.project").count() == 4, f"{name}: featured projects"
             assert page.locator("#heroTitle").is_visible(), f"{name}: hero hidden"
+            assert page.locator(".hero-title .line").first.evaluate("(el) => el.scrollWidth <= el.clientWidth + 2"), f"{name}: clipped hero headline"
             assert page.locator(".contact .email-link").count() == 1, f"{name}: contact fallback"
             assert page.locator(".brief-form").evaluate("(form) => !form.checkValidity()"), f"{name}: required contact fields"
             overflow = page.evaluate("document.documentElement.scrollWidth - window.innerWidth")

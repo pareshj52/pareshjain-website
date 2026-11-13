@@ -4,6 +4,7 @@ on:
     branches: ['redesign/awwwards-art-direction-2026-11-13']
     paths:
       - qa/visual_audit.py
+      - index.html
       - .github/workflows/visual-qa.yml
 jobs:
   browser-qa:

@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy | Paresh Jain</title>
+<meta name="description" content="How pareshjain.com handles enquiries, analytics and cookies.">
+<link rel="canonical" href="https://www.pareshjain.com/privacy.html">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +20,10 @@ h2{font-size:1.25rem;margin:2.5rem 0 .5rem;font-weight:600}
 p,li{color:#3A4060}
 a{color:#1E2448}
 footer{margin:4rem 0 3rem;color:#596079;font-size:.9rem}
+button{font:inherit;font-weight:600;cursor:pointer;min-height:2.75rem;padding:0 1.2rem;border-radius:999px;border:1.5px solid #1E2448;background:#fff;color:#1E2448}
 </style>
+<script src="/assets/tracking.js"></script>
+<script defer src="/assets/consent.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -26,12 +31,14 @@ footer{margin:4rem 0 3rem;color:#596079;font-size:.9rem}
 <h1>Privacy</h1>
 <p>This site belongs to Paresh Jain, a freelance marketing consultant based in New Delhi, India. This page explains what information the site collects and what happens to it.</p>
 
-<h2>When you send a brief</h2>
-<p>The form collects your name, email, company, launch date and message. It is delivered to my inbox through FormSubmit (formsubmit.co). I use it only to reply to you about your project. I don’t sell it or add you to a mailing list.</p>
+<h2>When you send an enquiry</h2>
+<p>The form collects your name, email, what you need, an optional budget range, an optional WhatsApp number and your message. It is delivered to my inbox through FormSubmit (formsubmit.co). I use it only to reply to you about your project. I don’t sell it or add you to a mailing list.</p>
 <p>If you arrived from an ad or a tracked link, the form also sends the campaign details from that link (for example the source and campaign name) so I know which channels bring useful enquiries.</p>
 
 <h2>Analytics and advertising</h2>
-<p>The site uses Google Analytics to count visits and see which pages and buttons people use. If I run ads, the site may also use the Meta Pixel to measure whether ads lead to enquiries. These services may set cookies. You can block them in your browser settings or with a content blocker, and the site will still work.</p>
+<p>The site uses Google Analytics to count visits and see which pages and buttons people use. When I run ads, it may also use Google Ads conversion tracking and the Meta Pixel to measure whether ads lead to enquiries. These services may set cookies.</p>
+<p>Visitors in the European Economic Area, the UK and Switzerland are asked first, and these tools only set cookies after you accept (Google Consent Mode). Everywhere else they run by default. You can change your choice at any time, or block cookies in your browser; the site still works.</p>
+<p><button type="button" id="cc">Change cookie choice</button></p>
 
 <h2>WhatsApp, email and calendar links</h2>
 <p>These open WhatsApp, your email app or Google Calendar’s booking page. Those services handle your information under their own privacy policies.</p>
@@ -39,7 +46,8 @@ footer{margin:4rem 0 3rem;color:#596079;font-size:.9rem}
 <h2>Keeping and deleting your information</h2>
 <p>I keep enquiry emails for as long as they’re useful for our conversation or project. To see or delete what I hold about you, email <a href="mailto:pareshj52@gmail.com">pareshj52@gmail.com</a>.</p>
 
-<footer>Last updated November 2026.</footer>
+<footer>Last updated 17 November 2026.</footer>
+<script>document.getElementById('cc').addEventListener('click',function(){ try{localStorage.removeItem('pj_consent');}catch(e){} if(window.PJ){PJ.consent=null; if(PJ.showConsent) PJ.showConsent();} });</script>
 </div>
 </body>
 </html>

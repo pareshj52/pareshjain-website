@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/paresh-jain-cutout.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/paresh-jain-hero-1400.webp" imagesrcset="assets/paresh-jain-hero-700.webp 700w, assets/paresh-jain-hero-1400.webp 1400w" imagesizes="(max-width:900px) 26rem, 46vw" fetchpriority="high">
 
 <!-- ===== Tracking config: paste your Meta Pixel ID between the quotes to switch it on ===== -->
 <script>window.PJ = { GA4: 'G-XV39SFSW40', META_PIXEL: '' };</script>
@@ -122,9 +122,11 @@ button{font:inherit;color:inherit}
 .globe{width:3.4rem;height:3.4rem;border-radius:50%;background:var(--indigo-2);display:grid;place-items:center;flex:none}
 .globe svg{width:1.7rem;height:1.7rem}
 @media (prefers-reduced-motion:no-preference){.globe svg{animation:spin 14s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}}
-.hero-right{position:absolute;left:70.5%;top:31%;width:min(24rem,26vw)}
+.hero-right{position:absolute;left:70.5%;top:25%;width:min(24rem,26vw);z-index:2}
 .hero-right .arrow{width:1.4rem;height:1.4rem;margin-bottom:1.5rem}
-.role{font-size:clamp(1.35rem,2.3vw,2.1rem);line-height:1.25;margin:0 0 2rem;font-weight:400}
+.role{font-size:clamp(1.35rem,2.3vw,2.1rem);line-height:1.25;margin:0 0 1rem;font-weight:400}
+.proof{font-size:.95rem;line-height:1.45;color:#C5CADD;margin:0 0 1.75rem;padding-left:.85rem;border-left:2px solid var(--saffron)}
+.proof b{color:var(--white);font-weight:600}
 .hero-right .orb{--s:8.5rem}
 .marquee{position:absolute;left:0;right:0;bottom:clamp(1rem,4vh,3rem);white-space:nowrap;pointer-events:none;user-select:none}
 .marquee-track{display:inline-flex;will-change:transform}
@@ -143,7 +145,8 @@ button{font:inherit;color:inherit}
   .globe{width:2.8rem;height:2.8rem}
   .hero-right{padding:1.75rem var(--g) 0}
   .hero-right .arrow{display:none}
-  .role{margin-bottom:1.5rem}
+  .role{margin-bottom:1rem}
+  .proof{margin-bottom:1.5rem}
   .hero-right .orb{display:none}
   .hero-mobile{display:flex;flex-wrap:wrap;gap:.75rem;padding:0 var(--g) 1.5rem}
   .marquee{position:relative;bottom:auto;padding:1rem 0 1.5rem}
@@ -331,6 +334,55 @@ textarea{min-height:8rem;resize:vertical}
 .form-lede{grid-column:1/-1;margin:0 0 .25rem;color:#C5CADD}
 .opt{color:#959CC0;font-weight:400}
 @media (max-width:900px){.svc article.pick::before{left:0}.freebie{grid-template-columns:1fr}.freebie .orb{--s:7.5rem}}
+
+/* Hero portrait: framed arch artwork (edges are finished in the image, so no CSS fade masks) */
+.hero-photo{aspect-ratio:700/823;z-index:0}
+.marquee{z-index:-1}
+.hero-left{z-index:1}
+.hero-photo img{-webkit-mask-image:none;mask-image:none}
+@media (max-width:900px){.hero-photo{aspect-ratio:700/823;width:min(88%,26rem)}.hero-photo img{-webkit-mask-image:none;mask-image:none}}
+/* ===== Visual refresh (preview) ===== */
+/* #4 Display type: use Archivo's wide axis for big headings */
+.sec h2,.work-head h2,.contact h2,.case-brand,.num b{font-variation-settings:"wdth" 118;font-weight:600;letter-spacing:-.045em}
+.statement{font-variation-settings:"wdth" 104}
+/* #3 Hero: smaller, quieter name band so the photo and CTA lead */
+.marquee-track span{font-size:clamp(4rem,10vw,10rem);color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.55);font-variation-settings:"wdth" 118}
+/* #5 Brand strip: bigger, gridded, more confident */
+.brands{grid-template-columns:1fr;gap:1.25rem;border-top:0;padding-top:0}
+.brand-list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.brand-list li{display:flex;align-items:center;justify-content:center;text-align:center;min-height:5.5rem;padding:.75rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:clamp(1.05rem,1.6vw,1.4rem);font-weight:600;font-variation-settings:"wdth" 112;color:var(--ink);transition:background-color .25s}
+.brand-list li:hover{background:var(--white)}
+@media (max-width:900px){.brand-list{grid-template-columns:repeat(3,minmax(0,1fr))}.brand-list li{min-height:4.25rem}}
+/* #2 Section rhythm: white work band, cards for prices */
+.work{background:var(--white)}
+.work .case-row{padding-left:0}
+#services{background:var(--paper)}
+.svc{border-top:0;gap:1.25rem}
+.svc article,.svc article+article,.svc article:last-child{background:var(--white);border:1px solid var(--line);border-radius:1rem;padding:2rem 1.75rem 2rem}
+.svc article.pick{border:2px solid var(--indigo);box-shadow:0 24px 48px -24px rgba(30,36,72,.35);transform:translateY(-.75rem)}
+.svc article.pick::before{left:1.75rem}
+.process{background:var(--white)}
+.steps li{background:var(--paper);border:0;border-radius:1rem;padding:1.75rem}
+.steps li::before{display:inline-grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--saffron);color:var(--ink);font-weight:600;font-size:.85rem;margin-bottom:1.25rem}
+@media (max-width:900px){.svc{gap:1rem}.svc article,.svc article+article{padding:1.75rem 1.4rem;border-bottom:1px solid var(--line)}.svc article.pick{transform:none;margin-top:.75rem}}
+/* #7 Contact: availability badge */
+.contact-head{align-items:flex-end}
+.avail{display:inline-flex;align-items:center;gap:.55rem;margin:0 0 1.25rem;padding:.4rem .9rem;border:1px solid #454C7A;border-radius:999px;font-size:.9rem;color:#C5CADD}
+.avail::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 4px rgba(61,220,132,.18)}
+.contact h2{font-size:clamp(2.3rem,5.6vw,5.5rem);max-width:16ch}
+/* #6 Mobile: tighter intro, compact numbers, shorter work list */
+.more-work{display:none}
+.more-work[hidden]{display:none!important}
+@media (max-width:700px){
+  .statement{font-size:1.45rem}
+  .intro-side .orb{display:none}
+  .intro-side p{margin-bottom:0}
+  .num-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+  .num b{font-size:2.6rem}
+  .num span{font-size:.82rem;line-height:1.35;margin-top:.6rem}
+  .cases.short .case:nth-child(n+5){display:none}
+  .more-work{display:inline-flex;margin-top:1.5rem}
+}
 </style>
 </head>
 <body>
@@ -362,7 +414,7 @@ textarea{min-height:8rem;resize:vertical}
 <main id="main">
   <section class="hero" id="top">
     <h1>Paresh Jain, freelance marketing and campaign lead in New Delhi</h1>
-    <div class="hero-photo"><img src="assets/paresh-jain-cutout.webp" alt="Paresh Jain" width="760" height="823" fetchpriority="high"></div>
+    <div class="hero-photo"><img src="assets/paresh-jain-hero-1400.webp" srcset="assets/paresh-jain-hero-700.webp 700w, assets/paresh-jain-hero-1400.webp 1400w" sizes="(max-width:900px) 26rem, 46vw" alt="Paresh Jain" width="700" height="823" fetchpriority="high"></div>
 
     <div class="hero-left">
       <div class="pill">
@@ -374,6 +426,7 @@ textarea{min-height:8rem;resize:vertical}
     <div class="hero-right">
       <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 8v11H8"/></svg>
       <p class="role">Senior marketing &amp; campaign lead for brands and agencies, without the full-time hire</p>
+      <p class="proof">11+ years at <b>WPP/VML, FCB Kinnect, Schbang and Cheil</b> on Amazon, Bata, Ford and Honda</p>
       <a class="orb orb-sun magnetic" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1380Zcu-WXHLTQi5dZqrbtbLfTN_Pl_yzwDjDL7QWRDAgHdRhg_jQIUqrLBvdR7pw_g4_Txei-" target="_blank" rel="noopener" data-track="hero_orb_call"><span>Free<br>30-min call</span></a>
     </div>
 
@@ -567,6 +620,7 @@ textarea{min-height:8rem;resize:vertical}
         </div>
 
       </div>
+      <button type="button" class="btn btn-ink more-work" id="more-work" aria-controls="cases">See all 7 projects</button>
 
       <div class="mid-cta">
         <p>Planning a launch or a big campaign? Tell me the date and what’s in the way.</p>
@@ -654,7 +708,10 @@ textarea{min-height:8rem;resize:vertical}
     <div class="wrap">
       <div class="contact-head">
         <img class="avatar" src="assets/paresh-jain-cutout.webp" alt="" width="104" height="104" loading="lazy">
-        <h2>Let’s grow<br>your brand together</h2>
+        <div>
+          <p class="avail">Taking new projects now</p>
+          <h2>Tell me the launch date. I’ll tell you if it’s doable.</h2>
+        </div>
       </div>
       <div class="rule"><a class="orb orb-sun magnetic" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1380Zcu-WXHLTQi5dZqrbtbLfTN_Pl_yzwDjDL7QWRDAgHdRhg_jQIUqrLBvdR7pw_g4_Txei-" target="_blank" rel="noopener" data-track="contact_orb_call"><span>Book a<br>free call</span></a></div>
 
@@ -712,6 +769,8 @@ textarea{min-height:8rem;resize:vertical}
 (function(){
   var d=document, root=d.documentElement;
   root.classList.add('js');
+  var cl=d.getElementById('cases'), mw=d.getElementById('more-work');
+  if(cl&&mw){cl.classList.add('short');mw.setAttribute('aria-expanded','false');mw.addEventListener('click',function(){cl.classList.remove('short');mw.setAttribute('aria-expanded','true');mw.hidden=true;track('see_all_work');});}
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fine=matchMedia('(hover: hover) and (pointer: fine)').matches;
 

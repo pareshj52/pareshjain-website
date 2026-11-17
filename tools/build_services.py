@@ -75,9 +75,41 @@ SERVICES = [
         "not": ["You need a full-time employee on your payroll", "You need design or production capacity rather than leadership"],
         "get": [("Pitch strategy & story", "The insight, the idea and the deck story, built with your team."), ("Presenting", "In the room with you, or behind the scenes if it’s white-label."), ("Account & client leadership", "Steadying live business, running status and stakeholder meetings."), ("Team set-up & SOPs", "Briefing flow, status reports and processes that hold up."), ("Gap cover", "Senior cover while you hire the next account lead.")],
         "steps": [("Day 1", "Brief", "What’s at stake, the client, the deadline, and your team."), ("Next days", "Work", "Strategy, story or account work, side by side with your team."), ("Before handover", "Hand back", "Notes and next steps so your team keeps going.")],
+        "pkg_title": "Fixed-price options for agencies",
+        "pkg_sub": "Book by the day, or take a fixed package for a pitch or a gap. White-label on all of them. Agencies outside India are quoted in USD.",
+        "packages": [
+            {"tier": "5 working days", "name": "Pitch sprint", "price": "₹70,000", "unit": "fixed fee", "about": "Senior strategy and story for one new-business pitch.", "items": ["Brief decode and client and category research", "The insight, strategy and big idea", "Deck story and slide-by-slide outline", "One rehearsal with your team", "Presenting with you, or behind the scenes"], "fit": "Good when a pitch is 1–3 weeks away and your strategist is stretched.", "cta": "Book a pitch sprint", "need": "agency_sprint", "pick": True},
+            {"tier": "By the day", "name": "Senior cover day", "price": "₹15,000", "unit": "a day", "about": "Flexible senior help for a live account, a workshop or a review.", "items": ["Account and client leadership on live business", "Strategy workshops and planning sessions", "Brief writing and creative reviews", "Status reporting and stakeholder meetings"], "fit": "Good for short, specific needs.", "cta": "Check my availability", "need": "agency"},
+            {"tier": "Monthly · 8 days", "name": "Interim account lead", "price": "₹1,20,000", "unit": "a month", "about": "Steady a key client while you hire the next account lead.", "items": ["Owns the client relationship and status rhythm", "Team briefing, SOPs and quality checks", "A handover plan for your new hire"], "fit": "Good when an account lead has left and the client is nervous.", "cta": "Talk about cover", "need": "agency_interim"},
+        ],
         "proof": ["ford", "bata", "honda"],
         "price": ("From ₹15,000 a day", "Billed by the day, with a written scope first. Prices exclude GST. Agencies outside India are quoted in USD."),
         "faq": [("Will you work under our agency’s name?", "Yes. White-label is fine, and I keep client work confidential."), ("How much notice do you need?", "Tell me the deadline. For pitches, a few days’ notice is usually enough to start."), ("Which agencies have you worked in?", "WPP/VML, FCB Kinnect, Schbang and Cheil, among six agencies over 11+ years.")],
+    },
+    {
+        "slug": "d2c-brand-growth",
+        "need": "d2c_audit",
+        "nav": "D2C & brand projects",
+        "short": "Agency & ads audit, creator campaigns, quick-commerce plans. From ₹49,999.",
+        "tier": "For D2C and consumer brands",
+        "title": "Fixed-price projects for D2C and consumer brands",
+        "seo_title": "D2C Ads Audit, Influencer & Quick-commerce Plans | Paresh Jain",
+        "desc": "Fixed-price projects for D2C brands: an independent agency and ads audit (₹49,999), a creator and influencer campaign plan (₹49,999) and a quick-commerce and marketplace spend plan (₹59,999).",
+        "lede": "Independent, senior answers to the questions D2C founders keep asking: is my agency working, should I spend on creators, and is quick commerce worth it?",
+        "meta": [("From ₹49,999", "fixed fee"), ("2–3 weeks", "per project"), ("Independent", "no media sales or commission")],
+        "for": ["You’re spending on Meta, Google or marketplace ads and returns have dropped", "You’ve changed agencies and still aren’t sure what’s working", "You’re planning a creator or influencer push and want it to pay back", "You’re deciding whether to go big on Blinkit, Zepto, Instamart or Amazon"],
+        "not": ["You want someone to run the ads day to day (I can brief and steer whoever does)", "You need guaranteed ROAS: nobody honest can promise it"],
+        "pkg_title": "Pick a project",
+        "pkg_sub": "Each one ends with a written plan and a walkthrough with your team. Prices exclude GST and any media spend.",
+        "packages": [
+            {"tier": "2 weeks", "name": "Agency & ads audit", "price": "₹49,999", "unit": "fixed fee", "about": "An independent second opinion on your agency, your ads and your funnel.", "why": "The most common founder complaint: ‘we changed agencies and nothing changed.’", "items": ["Read-only review of Meta and Google ad accounts", "Funnel check: offer, landing pages, product pages, checkout", "Attribution check: what platforms claim vs. actual orders", "Agency scope, reporting and fees reviewed against results", "A clear verdict (keep, fix or replace) and a 30-60-90 day plan"], "fit": "Good if you spend ₹2 lakh+ a month on ads and aren’t sure it’s working.", "cta": "Get an audit", "need": "d2c_audit", "pick": True},
+            {"tier": "2–3 weeks", "name": "Creator & influencer campaign plan", "price": "₹49,999", "unit": "fixed fee", "about": "A creator campaign built to sell, not just to get views.", "items": ["Campaign idea and creator mix: macro, micro and nano", "Selection criteria and a shortlist brief for your agency", "Creator briefs, dos and don’ts, approval flow", "Budget split, fee benchmarks and a usage-rights checklist", "Tracking plan: codes, links and what counts as success"], "fit": "Good before a launch, a sale or a big festive push.", "cta": "Plan a creator campaign", "need": "d2c_creator"},
+            {"tier": "2–3 weeks", "name": "Quick-commerce & marketplace plan", "price": "₹59,999", "unit": "fixed fee", "about": "Decide where to sell and spend: Blinkit, Zepto, Instamart, Amazon or Flipkart.", "items": ["Which platforms, cities and SKUs to start with", "Spend plan against listing fees and minimum spends", "Listing, pricing and pack-size recommendations", "How to separate paid from organic sales", "A 90-day test plan with stop and scale rules"], "fit": "Good if quick commerce is eating budget and you can’t tell if it pays.", "cta": "Plan my marketplace spend", "need": "d2c_qcomm"},
+        ],
+        "steps": [("Week 1", "Access & discovery", "Read-only access, your numbers, and a call with you and your agency."), ("Week 2", "Analysis", "I review, benchmark and pressure-test what’s happening."), ("Weeks 2–3", "Plan", "A written plan with priorities, owners and numbers to watch."), ("Handover", "Walkthrough", "We go through it with your team and agency.")],
+        "proof": ["amazon", "honda", "bata"],
+        "price": ("From ₹49,999", "Fixed fee per project, agreed in writing before work starts. If you move to a fractional engagement within 30 days, the project fee is adjusted against the first month. Prices exclude GST and any media spend."),
+        "faq": [("Will you tell my agency they’re doing badly?", "I’ll tell you what the numbers show, fairly. Often the fix is a clearer brief, offer or budget split, not a new agency."), ("Do you need logins?", "Read-only access to ad accounts and analytics is enough. I don’t change live campaigns during an audit."), ("Do you take commission from creators or platforms?", "No. I don’t sell media or take referral fees, so the advice stays independent."), ("Can you run the plan afterwards?", "Yes, as a fractional marketing lead managing your agencies and creators.")],
     },
     {
         "slug": "small-business-marketing",
@@ -87,13 +119,14 @@ SERVICES = [
         "tier": "For small businesses & MSMEs",
         "title": "Senior marketing help, sized for small businesses",
         "seo_title": "Marketing Packages for Small Businesses & MSMEs | Paresh Jain",
-        "desc": "Affordable marketing packages for small businesses and MSMEs: a ₹4,999 strategy session, a ₹14,999 marketing health check, a ₹34,999 launch sprint and a ₹39,999/month marketing advisor.",
+        "desc": "Affordable marketing packages for small businesses and MSMEs: a ₹4,999 strategy session, ₹14,999 marketing health check, ₹19,999 local visibility plan (Google, reviews, WhatsApp), ₹34,999 launch & festive sprint and ₹39,999/month marketing advisor.",
         "lede": "The same planning I’ve done for big brands, in smaller, fixed-price packages for founders, shops, clinics, manufacturers and service businesses.",
         "meta": [("From ₹4,999", "fixed price"), ("1 hour to monthly", "pick what fits"), ("No lock-in", "on any package")],
         "packages": [
             {"tier": "One session · 90 minutes", "name": "Strategy session", "price": "₹4,999", "unit": "one-off", "about": "A focused call on your biggest marketing question.", "items": ["90-minute video call with me", "We look at your business, customers and current marketing", "Written summary of your top 5 actions within 2 working days"], "fit": "Good if you want a senior second opinion before you spend.", "cta": "Book a session", "need": "sme_session"},
             {"tier": "One week", "name": "Marketing health check", "price": "₹14,999", "unit": "fixed fee", "about": "A full review of how you’re showing up, and what to fix first.", "items": ["Review of your website, Google Business Profile, social and any ads", "A look at 3 competitors", "A 90-day action plan in priority order", "60-minute walkthrough call"], "fit": "Good if you’re doing a bit of everything and don’t know what’s working.", "cta": "Get a health check", "need": "sme_audit", "pick": True},
-            {"tier": "Two weeks", "name": "Launch & festive sprint", "price": "₹34,999", "unit": "fixed fee", "about": "One campaign plan for a launch, sale or festive season, sized for small budgets.", "items": ["The offer, the message and the idea", "Channel mix: WhatsApp, Instagram, Google, local and offline", "A 4-week content and posting calendar", "Budget split and what to measure"], "fit": "Good if you have a date coming up and want it to land.", "cta": "Plan my campaign", "need": "sme_sprint"},
+            {"tier": "One week", "name": "Local visibility plan", "price": "₹19,999", "unit": "fixed fee", "about": "Get found on Google Maps, Search and WhatsApp, even when people never click through to a website.", "why": "Many customers now decide from the Google listing, reviews and a WhatsApp chat.", "items": ["Google Business Profile review: categories, photos, posts, Q&A", "A simple system to ask for and reply to reviews", "Consistent listings on Justdial, IndiaMART or sector sites", "WhatsApp Business set-up plan: catalogue, quick replies, broadcast rules", "What to track: calls, direction requests, enquiries"], "fit": "Good for shops, clinics, restaurants, showrooms and local service firms.", "cta": "Get found locally", "need": "sme_local"},
+            {"tier": "Two weeks", "name": "Launch & festive sprint", "price": "₹34,999", "unit": "fixed fee", "about": "One campaign plan for a launch, sale or festive season, sized for small budgets, including how to keep the new customers.", "items": ["The offer, the message and the idea", "Channel mix: WhatsApp, Instagram, Google, local and offline", "A 4-week content and posting calendar", "Budget split and what to measure", "An after-sale plan to bring festive buyers back"], "fit": "Good if you have a date coming up and want it to land, and last.", "cta": "Plan my campaign", "need": "sme_sprint"},
             {"tier": "Monthly", "name": "Monthly marketing advisor", "price": "₹39,999", "unit": "a month", "about": "A senior marketing advisor on call, without the retainer of an agency.", "items": ["2 strategy calls a month", "WhatsApp access on working days", "A monthly plan and numbers review", "Feedback on your agency’s or freelancer’s work"], "fit": "Good if you have someone doing the work and need someone steering it.", "cta": "Talk about advisory", "need": "sme_advisor"},
         ],
         "for": ["Founder-led businesses, shops, clinics, restaurants, manufacturers and service firms", "You’re spending on marketing but not sure what’s working", "You have a freelancer or small agency and need someone senior steering them", "You want a clear plan you can run with your own team"],
@@ -154,35 +187,42 @@ def page(s):
     faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in s["faq"])
     enquire = f"/?need={s['need']}#contact"
 
+    get_block = ""
+    offers = []
+    if "get" in s:
+        dels = "".join(f'<div class="del"><h3>{e(h)}</h3><p>{e(p)}</p></div>' for h, p in s["get"])
+        get_block += f"""<section class="sec" id="what-you-get">
+  <div class="wrap">
+    <h2>What you get</h2>
+    <div class="grid-3">{dels}</div>
+  </div>
+</section>
+"""
+        num = "".join(ch for ch in s["price"][0] if ch.isdigit())
+        offers.append({"@type": "Offer", "name": s["title"], "price": num, "priceCurrency": "INR"})
     if "packages" in s:
         cards = []
         for p in s["packages"]:
             items = "".join(f"<li>{e(i)}</li>" for i in p["items"])
             cls = "pkg pick" if p.get("pick") else "pkg"
             btn = "btn-sun" if p.get("pick") else "btn-ink"
+            why = f'<p class="why">{e(p["why"])}</p>' if p.get("why") else ""
             cards.append(
-                f'<article class="{cls}"><p class="tier">{e(p["tier"])}</p><h3>{e(p["name"])}</h3>'
-                f'<p class="price">{e(p["price"])} <small>{e(p["unit"])}</small></p><p>{e(p["about"])}</p>'
+                f'<article class="{cls}" id="{p["need"]}"><p class="tier">{e(p["tier"])}</p><h3>{e(p["name"])}</h3>'
+                f'<p class="price">{e(p["price"])} <small>{e(p["unit"])}</small></p><p>{e(p["about"])}</p>{why}'
                 f'<ul>{items}</ul><p class="fit">{e(p["fit"])}</p>'
                 f'<a class="btn {btn}" href="/?need={p["need"]}#contact" data-track="pkg_{p["need"]}">{e(p["cta"])}</a></article>')
-        get_block = f"""<section class="sec" id="packages">
+        n = len(cards)
+        gcls = "grid-3" if n in (3, 5, 6) else "grid-4"
+        get_block += f"""<section class="sec{' white' if 'get' in s else ''}" id="packages">
   <div class="wrap">
-    <h2>Pick a package</h2>
-    <p class="sub">Fixed prices, no lock-in. Not sure which one? Book the free 30-minute call and I’ll tell you honestly, including if you don’t need me.</p>
-    <div class="grid-4">{''.join(cards)}</div>
+    <h2>{e(s.get("pkg_title", "Pick a package"))}</h2>
+    <p class="sub">{e(s.get("pkg_sub", "Fixed prices, no lock-in. Not sure which one? Book the free 30-minute call and I’ll tell you honestly, including if you don’t need me."))}</p>
+    <div class="{gcls}">{''.join(cards)}</div>
   </div>
-</section>"""
-        offers = [{"@type": "Offer", "name": p["name"], "price": p["price"].replace("₹", "").replace(",", ""), "priceCurrency": "INR"} for p in s["packages"]]
-    else:
-        dels = "".join(f'<div class="del"><h3>{e(h)}</h3><p>{e(p)}</p></div>' for h, p in s["get"])
-        get_block = f"""<section class="sec" id="what-you-get">
-  <div class="wrap">
-    <h2>What you get</h2>
-    <div class="grid-3">{dels}</div>
-  </div>
-</section>"""
-        num = "".join(ch for ch in s["price"][0] if ch.isdigit())
-        offers = [{"@type": "Offer", "price": num, "priceCurrency": "INR"}]
+</section>
+"""
+        offers += [{"@type": "Offer", "name": p["name"], "price": "".join(ch for ch in p["price"] if ch.isdigit()), "priceCurrency": "INR"} for p in s["packages"]]
 
     ld = {
         "@context": "https://schema.org",

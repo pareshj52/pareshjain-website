@@ -47,7 +47,7 @@
   {"@type":"Question","name":"Do you work with teams outside India?","acceptedAnswer":{"@type":"Answer","text":"Yes. I work remotely with brand and agency teams anywhere, and I am based in New Delhi for anything that needs to happen on the ground in India."}},
   {"@type":"Question","name":"Do you work with agencies or only brands?","acceptedAnswer":{"@type":"Answer","text":"Both. Brands bring me in to run a launch end to end. Agencies bring me in to lead a pitch, steady a live account or cover a delivery gap."}},
   {"@type":"Question","name":"How does an engagement start?","acceptedAnswer":{"@type":"Answer","text":"Book a free 30-minute review call or send a short note. If there is a fit, I send a written scope with a fixed fee within two working days."}},
-  {"@type":"Question","name":"How much does it cost?","acceptedAnswer":{"@type":"Answer","text":"Campaign and launch plans start at Rs 75,000 as a fixed fee. A fractional marketing lead role starts at Rs 1,50,000 a month for about two days a week. Agency pitch and account cover starts at Rs 15,000 a day. Small business and MSME packages start at Rs 4,999. The first call is free."}}
+  {"@type":"Question","name":"How much does it cost?","acceptedAnswer":{"@type":"Answer","text":"Campaign and launch plans start at Rs 75,000 as a fixed fee. A fractional marketing lead role starts at Rs 1,50,000 a month for about two days a week. Agency pitch and account cover starts at Rs 15,000 a day. Small business and MSME packages start at Rs 4,999, and fixed-price D2C projects at Rs 49,999. The first call is free."}}
  ]}
 ]}
 </script>
@@ -386,8 +386,11 @@ textarea{min-height:8rem;resize:vertical}
 .sme-card em{font-style:normal;font-size:1.5rem;font-weight:600;letter-spacing:-.02em}
 .sme-card em small{font-size:.85rem;font-weight:400;color:var(--muted)}
 .sme-card i{font-style:normal;color:var(--muted);font-size:.95rem}
-@media (max-width:1000px){.sme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.sme-grid{grid-template-columns:1fr}}
+.sme-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sme-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:1200px){.sme-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:1000px){.sme-grid,.sme-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.sme-grid,.sme-grid.three{grid-template-columns:1fr}}
 /* #7 Contact: availability badge */
 .contact-head{align-items:flex-end}
 .avail{display:inline-flex;align-items:center;gap:.55rem;margin:0 0 1.25rem;padding:.4rem .9rem;border:1px solid #454C7A;border-radius:999px;font-size:.9rem;color:#C5CADD}
@@ -704,10 +707,22 @@ textarea{min-height:8rem;resize:vertical}
           <a class="more-link" href="services/small-business-marketing.html">See all small business packages →</a>
         </div>
         <div class="sme-grid">
-          <a class="sme-card" href="services/small-business-marketing.html#packages" data-track="sme_session"><span>90-min call</span><b>Strategy session</b><em>₹4,999</em><i>Your top 5 actions, in writing.</i></a>
-          <a class="sme-card pick" href="services/small-business-marketing.html#packages" data-track="sme_audit"><span>1 week</span><b>Marketing health check</b><em>₹14,999</em><i>Website, Google, social and ads reviewed, plus a 90-day plan.</i></a>
-          <a class="sme-card" href="services/small-business-marketing.html#packages" data-track="sme_sprint"><span>2 weeks</span><b>Launch &amp; festive sprint</b><em>₹34,999</em><i>One campaign plan sized for small budgets.</i></a>
-          <a class="sme-card" href="services/small-business-marketing.html#packages" data-track="sme_advisor"><span>Monthly</span><b>Marketing advisor</b><em>₹39,999<small>/month</small></em><i>2 strategy calls a month and WhatsApp access.</i></a>
+          <a class="sme-card" href="services/small-business-marketing.html#sme_session" data-track="sme_session"><span>90-min call</span><b>Strategy session</b><em>₹4,999</em><i>Your top 5 actions, in writing.</i></a>
+          <a class="sme-card pick" href="services/small-business-marketing.html#sme_audit" data-track="sme_audit"><span>1 week</span><b>Marketing health check</b><em>₹14,999</em><i>Website, Google, social and ads reviewed, plus a 90-day plan.</i></a>
+          <a class="sme-card" href="services/small-business-marketing.html#sme_local" data-track="sme_local"><span>1 week</span><b>Local visibility plan</b><em>₹19,999</em><i>Google listing, reviews and WhatsApp, sorted.</i></a>
+          <a class="sme-card" href="services/small-business-marketing.html#sme_sprint" data-track="sme_sprint"><span>2 weeks</span><b>Launch &amp; festive sprint</b><em>₹34,999</em><i>One campaign plan sized for small budgets.</i></a>
+          <a class="sme-card" href="services/small-business-marketing.html#sme_advisor" data-track="sme_advisor"><span>Monthly</span><b>Marketing advisor</b><em>₹39,999<small>/month</small></em><i>2 strategy calls a month and WhatsApp access.</i></a>
+        </div>
+      </div>
+      <div class="sme" id="d2c-projects">
+        <div class="sme-head">
+          <div><p class="tier">For D2C &amp; consumer brands</p><h3>Fixed-price projects for the questions founders keep asking.</h3></div>
+          <a class="more-link" href="services/d2c-brand-growth.html">See D2C projects →</a>
+        </div>
+        <div class="sme-grid three">
+          <a class="sme-card pick" href="services/d2c-brand-growth.html#d2c_audit" data-track="d2c_audit"><span>2 weeks</span><b>Agency &amp; ads audit</b><em>₹49,999</em><i>Is your agency working? An independent verdict and a 90-day plan.</i></a>
+          <a class="sme-card" href="services/d2c-brand-growth.html#d2c_creator" data-track="d2c_creator"><span>2–3 weeks</span><b>Creator &amp; influencer plan</b><em>₹49,999</em><i>A creator campaign built to sell, with briefs and tracking.</i></a>
+          <a class="sme-card" href="services/d2c-brand-growth.html#d2c_qcomm" data-track="d2c_qcomm"><span>2–3 weeks</span><b>Quick-commerce plan</b><em>₹59,999</em><i>Blinkit, Zepto, Instamart or Amazon: where to sell and spend.</i></a>
         </div>
       </div>
       <p class="sec-sub small">Teams outside India are quoted in USD. Prices exclude GST and any media or production spend.</p>
@@ -731,7 +746,7 @@ textarea{min-height:8rem;resize:vertical}
       <div class="faq">
         <details><summary>Do you work with teams outside India?</summary><p>Yes. I work remotely with brand and agency teams anywhere, and I’m based in New Delhi for anything that needs to happen on the ground in India.</p></details>
         <details><summary>Do you work with agencies or only brands?</summary><p>Both. Brands bring me in to plan and run campaigns end to end. Agencies bring me in to lead a pitch, steady a live account or cover a gap, white-label if needed.</p></details>
-        <details><summary>How much does it cost?</summary><p>Campaign and launch plans start at ₹75,000 as a fixed fee. A fractional marketing lead role starts at ₹1,50,000 a month for about two days a week. Agency pitch and account cover starts at ₹15,000 a day. For small businesses and MSMEs there are fixed-price packages from ₹4,999. The first call is free, and you get a fixed quote before any work starts.</p></details>
+        <details><summary>How much does it cost?</summary><p>Campaign and launch plans start at ₹75,000 as a fixed fee. A fractional marketing lead role starts at ₹1,50,000 a month for about two days a week. Agency pitch and account cover starts at ₹15,000 a day. For small businesses and MSMEs there are fixed-price packages from ₹4,999, and fixed-price D2C projects from ₹49,999. The first call is free, and you get a fixed quote before any work starts.</p></details>
         <details><summary>How does an engagement start?</summary><p>Book a free 30-minute call or send a short note below. If there’s a fit, I send a written scope with a fixed fee within two working days.</p></details>
         <details><summary>How soon can you start?</summary><p>I’m taking on new work now and can usually start within a week. Tell me your date and I’ll say straight away if it’s realistic.</p></details>
         <details><summary>Do you work with startups and D2C brands?</summary><p>Yes. Most of my work has been for large brands through agencies, and I bring the same planning and delivery discipline to founder-led teams, sized to your budget.</p></details>
@@ -763,7 +778,7 @@ textarea{min-height:8rem;resize:vertical}
           <div class="field"><label for="f-name">Your name</label><input id="f-name" type="text" name="name" required autocomplete="name"></div>
           <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
           <div class="field"><label for="f-need">What do you need?</label>
-            <select id="f-need" name="need" required><option value="">Choose one</option><option value="plan">A campaign or launch plan</option><option value="fractional">A fractional marketing lead</option><option value="agency">Agency pitch or account cover</option><option value="sme_session">Small business: strategy session (₹4,999)</option><option value="sme_audit">Small business: marketing health check (₹14,999)</option><option value="sme_sprint">Small business: launch &amp; festive sprint (₹34,999)</option><option value="sme_advisor">Small business: monthly advisor (₹39,999/month)</option><option>Not sure yet: a free review call</option></select></div>
+            <select id="f-need" name="need" required><option value="">Choose one</option><option value="plan">A campaign or launch plan</option><option value="fractional">A fractional marketing lead</option><option value="agency">Agency: senior cover by the day</option><option value="agency_sprint">Agency: pitch sprint (₹70,000)</option><option value="agency_interim">Agency: interim account lead</option><option value="d2c_audit">D2C: agency &amp; ads audit (₹49,999)</option><option value="d2c_creator">D2C: creator &amp; influencer plan (₹49,999)</option><option value="d2c_qcomm">D2C: quick-commerce &amp; marketplace plan (₹59,999)</option><option value="sme_session">Small business: strategy session (₹4,999)</option><option value="sme_audit">Small business: marketing health check (₹14,999)</option><option value="sme_local">Small business: local visibility plan (₹19,999)</option><option value="sme_sprint">Small business: launch &amp; festive sprint (₹34,999)</option><option value="sme_advisor">Small business: monthly advisor (₹39,999/month)</option><option>Not sure yet: a free review call</option></select></div>
           <div class="field"><label for="f-budget">Budget for my fee</label>
             <select id="f-budget" name="budget"><option value="">Choose one (optional)</option><option>Under ₹15,000</option><option>₹15,000 – ₹40,000</option><option>₹40,000 – ₹75,000</option><option>₹75,000 – ₹1,50,000</option><option>₹1,50,000 – ₹3,00,000</option><option>₹3,00,000+</option><option>Not sure yet</option></select></div>
           <div class="field"><label for="f-phone">WhatsApp number <span class="opt">(optional)</span></label><input id="f-phone" type="tel" name="whatsapp" autocomplete="tel" inputmode="tel"></div>
@@ -788,7 +803,7 @@ textarea{min-height:8rem;resize:vertical}
       <footer class="foot">
         <div><b>Local time</b><span id="clock">IST</span></div>
         <div><b>Based in</b><span>New Delhi, India</span></div>
-        <nav aria-label="Footer"><a href="services/campaign-launch-plan.html">Campaign plans</a><a href="services/fractional-marketing-lead.html">Fractional lead</a><a href="services/agency-pitch-account-cover.html">For agencies</a><a href="services/small-business-marketing.html">Small business</a><a href="privacy.html">Privacy</a><a href="https://www.linkedin.com/in/paresh-jain-662b7589/" target="_blank" rel="noopener">LinkedIn</a><span>© 2026 Paresh Jain</span></nav>
+        <nav aria-label="Footer"><a href="services/campaign-launch-plan.html">Campaign plans</a><a href="services/fractional-marketing-lead.html">Fractional lead</a><a href="services/agency-pitch-account-cover.html">For agencies</a><a href="services/d2c-brand-growth.html">D2C projects</a><a href="services/small-business-marketing.html">Small business</a><a href="privacy.html">Privacy</a><a href="https://www.linkedin.com/in/paresh-jain-662b7589/" target="_blank" rel="noopener">LinkedIn</a><span>© 2026 Paresh Jain</span></nav>
       </footer>
     </div>
   </section>

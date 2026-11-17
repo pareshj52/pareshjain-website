@@ -84,7 +84,7 @@ h1,h2,.price-big{font-variation-settings:"wdth" 118;font-weight:600;letter-spaci
 /* Packages (small business page) */
 .pkg{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:1rem;padding:1.75rem 1.5rem;position:relative}
 .pkg.pick{border:2px solid var(--indigo);box-shadow:0 24px 48px -24px rgba(30,36,72,.35)}
-.pkg.pick::before{content:"Most popular";position:absolute;top:-.8rem;left:1.5rem;background:var(--saffron);color:var(--ink);font-size:.75rem;font-weight:600;padding:.25rem .6rem;border-radius:999px}
+.pkg.pick::before{content:"Best place to start";position:absolute;top:-.8rem;left:1.5rem;background:var(--saffron);color:var(--ink);font-size:.75rem;font-weight:600;padding:.25rem .6rem;border-radius:999px}
 .pkg .tier{color:var(--muted)}
 .pkg h3{margin:0 0 .6rem;font-size:1.35rem;letter-spacing:-.02em}
 .pkg .price{font-size:1.75rem;font-weight:600;letter-spacing:-.02em;margin:0 0 .9rem;line-height:1.1}
@@ -147,3 +147,5 @@ h1,h2,.price-big{font-variation-settings:"wdth" 118;font-weight:600;letter-spaci
   .foot{padding-bottom:6rem}
 }
 .tier.muted{color:var(--muted)}
+.pkg .why{font-size:.9rem;color:var(--ink);background:#FFF4E6;border-left:3px solid var(--saffron);padding:.55rem .75rem;border-radius:.4rem}
+.pkg{scroll-margin-top:1.5rem}

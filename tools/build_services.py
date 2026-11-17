@@ -151,6 +151,7 @@ SERVICES = [
         "meta": [("From ₹24,999", "fixed price"), ("Briefed properly", "every piece has a job"), ("Ready to post", "sized for each platform")],
         "for": ["You need a simple, professional brand look to start with", "You want consistent social posts without hiring a designer full-time", "You run Meta or Google ads and need fresh creatives to test", "You’ve had pretty creative that didn’t sell"],
         "not": ["You need a full agency for TV, large shoots or big-budget film", "You want unlimited designs on demand"],
+        "gallery": [("coindcx-campaign", "CoinDCX #BitcoinLiyaKya", "Films, memes, topicals and performance creative"), ("social-branding", "Social media branding", "Bata, Godrej, Honda, Tasva and Jim Beam feeds"), ("amazon-ads", "Amazon Prime Day ’23", "Sequential, personalised digital ads"), ("film-godrej", "Godrej Security", "“Utsav Ke Rakhwale” festive film"), ("coindcx-cricket", "CoinDCX × India vs Sri Lanka T20", "Sponsorship creative"), ("film-m3m", "M3M “No Means No”", "Realty+ award-winning film")],
         "pkg_title": "Pick a creative package",
         "pkg_sub": "Fixed prices. Stock images, music licences, shoots and ad spend are billed at actuals. Prices exclude GST.",
         "packages": [
@@ -270,6 +271,18 @@ def page(s):
 """
         offers += [{"@type": "Offer", "name": p["name"], "price": "".join(ch for ch in p["price"] if ch.isdigit()), "priceCurrency": "INR"} for p in s["packages"]]
 
+    gallery = ""
+    if s.get("gallery"):
+        figs = "".join(f'<figure><img src="/assets/work/{g[0]}.webp" alt="{e(g[1])}: {e(g[2])}" loading="lazy" decoding="async"><figcaption><b>{e(g[1])}</b>{e(g[2])}</figcaption></figure>' for g in s["gallery"])
+        gallery = f"""<section class="sec" id="work-samples">
+  <div class="wrap">
+    <h2>{e(s.get("gallery_title", "Creative from campaigns I’ve led"))}</h2>
+    <div class="gallery">{figs}</div>
+    <p class="gallery-note">Creative produced by agency teams on accounts I led or managed. Shown from my portfolio.</p>
+  </div>
+</section>
+"""
+
     ld = {
         "@context": "https://schema.org",
         "@graph": [
@@ -357,7 +370,7 @@ def page(s):
 
 {get_block}
 
-<section class="sec white" id="how">
+{gallery}<section class="sec white" id="how">
   <div class="wrap">
     <h2>How it works</h2>
     <ol class="steps">{steps}</ol>

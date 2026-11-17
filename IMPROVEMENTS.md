@@ -14,6 +14,12 @@ One focused improvement per week, shipped as a PR for Paresh to approve. Read th
 - **Why:** Page was text-heavy and monotone, prices didn't stand out, mobile scroll was long, old cutout had haloed/smeared edges.
 - **How to judge:** GA4 hero/price/contact CTA clicks, `see_all_work` events, and enquiry/booking emails over the next 2–4 weeks vs the first week of v4.
 
+## 2026-11-17 — Service pages, SME/MSME packages, brand logos (preview, awaiting approval)
+
+- **What:** 4 service pages in `/services/` built by `tools/build_services.py` (shared CSS `assets/site.css`): campaign & launch plan, fractional marketing lead, agency pitch & account cover, small business packages. New SME packages proposed: strategy session ₹4,999, marketing health check ₹14,999, launch & festive sprint ₹34,999, monthly marketing advisor ₹39,999/month (prices are proposals for Paresh to confirm). Home: "Small business" nav link, "Full details →" on each service card, SME package strip, logos (Simple Icons, monochrome) for Ford, Bata, Honda, MG, Tata, vivo, Uber; text for brands without a free logo file. Form: SME options + lower budget bands; `?need=` preselects the option. Sitemap updated.
+- **Why:** Ads and SEO need a dedicated page per offer; smaller businesses had no entry point below ₹75,000.
+- **How to judge:** Visits and CTA clicks on `/services/*`, enquiries selecting SME options.
+
 ## Open ideas (not done yet)
 
 - International visitors see INR-only prices and INR-only budget options in the form; "quoted in USD" has no figure. Needs Paresh to supply USD starting prices before anything can change.

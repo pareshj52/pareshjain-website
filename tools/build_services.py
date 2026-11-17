@@ -190,18 +190,8 @@ SERVICES = [
     },
 ]
 
-GA = """<script>window.PJ = { GA4: 'G-XV39SFSW40', META_PIXEL: '' };</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XV39SFSW40"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', PJ.GA4);
-  if (PJ.META_PIXEL) {
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', PJ.META_PIXEL); fbq('track', 'PageView');
-  }
-</script>"""
+GA = """<script src="/assets/tracking.js"></script>
+<script defer src="/assets/consent.js"></script>"""
 
 TRACK = """<script>
 (function(){
@@ -311,7 +301,13 @@ def page(s):
 <meta property="og:title" content="{e(s['seo_title'])}">
 <meta property="og:description" content="{e(s['desc'])}">
 <meta property="og:image" content="{SITE}/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(s['seo_title'])}">
+<meta name="twitter:description" content="{e(s['desc'])}">
+<meta name="twitter:image" content="{SITE}/assets/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">

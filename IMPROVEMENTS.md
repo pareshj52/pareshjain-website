@@ -33,6 +33,12 @@ One focused improvement per week, shipped as a PR for Paresh to approve. Read th
 - **Why:** Mobile visitors had no way to reach the services from the header; dead links showed Vercel's default 404.
 - **How to judge:** `page_not_found` events stay near zero; service-page visits from mobile go up.
 
+## 2026-11-17 — Go-live set-up: Google, Meta, AI search, consent (merged on Paresh's instruction)
+
+- **What:** All tracking now lives in one file, `assets/tracking.js`. It holds the GA4 ID and empty slots for the Meta Pixel, Google Ads tag and Google Ads lead conversion; paste each ID there once and every page uses it. Google Consent Mode v2 asks first in the EEA, UK and Switzerland. A small cookie notice (`assets/consent.js`) shows to visitors on European time zones, and the Meta Pixel loads there only after "Accept". The thanks page fires the GA4 `generate_lead` event, plus Meta `Lead` and the Google Ads conversion once their IDs are set. `robots.txt` explicitly welcomes Google, Bing and the AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, Meta). New `llms.txt` gives AI assistants a summary of services, prices and work. Service pages got full OG/Twitter tags; the home page description now covers all audiences; the privacy page is accurate for the current form fields, cookies and consent, with a "Change cookie choice" button; sitemap dates refreshed.
+- **Why:** Ready for Google/Meta ads (incl. UK/EU) and for being cited by AI search.
+- **How to judge:** GA4 Realtime shows page views and `generate_lead`; Meta Events Manager shows PageView/Lead once the Pixel ID is set.
+
 ## Open ideas (not done yet)
 
 - International visitors see INR-only prices and INR-only budget options in the form; "quoted in USD" has no figure. Needs Paresh to supply USD starting prices before anything can change.

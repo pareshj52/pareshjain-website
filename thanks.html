@@ -11,18 +11,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
 
-<!-- Keep these IDs the same as on index.html -->
-<script>window.PJ = { GA4: 'G-XV39SFSW40', META_PIXEL: '' };</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XV39SFSW40"></script>
+<script src="/assets/tracking.js"></script>
+<script defer src="/assets/consent.js"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', PJ.GA4);
-  if (PJ.META_PIXEL) {
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', PJ.META_PIXEL); fbq('track', 'PageView');
-  }
   // Count the lead once per submitted brief (not on refresh or direct visits)
   (function(){
     var fresh=false;
@@ -30,6 +21,7 @@
     if(fresh){
       gtag('event','generate_lead',{method:'brief_form'});
       if(window.fbq && PJ.META_PIXEL) fbq('track','Lead');
+      if(PJ.GOOGLE_ADS_LEAD) gtag('event','conversion',{send_to:PJ.GOOGLE_ADS_LEAD});
     }
   })();
 </script>

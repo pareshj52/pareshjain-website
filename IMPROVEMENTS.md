@@ -21,6 +21,12 @@ One focused improvement per week, shipped as a PR for Paresh to approve. Read th
 - **Added after market research (same preview):** SME local visibility plan ₹19,999; after-sale plan inside the festive sprint; new D2C page (`/services/d2c-brand-growth.html`) with agency & ads audit ₹49,999, creator & influencer plan ₹49,999, quick-commerce & marketplace plan ₹59,999; agency pitch sprint ₹70,000 and interim account lead ₹1,20,000/month. Research notes in the project doc `claude/market-demand-packages-nov17.md`. Also added `/services/website-development.html` (AI-built landing page ₹24,999, WordPress site ₹39,999, Shopify starter ₹59,999, Shopify refresh ₹34,999, care plan ₹7,999/mo) and `/services/creative-services.html` (brand kit ₹24,999, social creatives ₹29,999/mo, ad creative pack ₹39,999), a home-page strip for both, and matching form options.
 - **How to judge:** Visits and CTA clicks on `/services/*`, enquiries selecting SME/D2C/agency package options.
 
+## 2026-11-17 — "Ways to work with me" organised by persona (preview)
+
+- **What:** The services section is now a tab switcher: Brands & startups, D2C & consumer brands, Small businesses & MSMEs, Agencies, Websites & creative. Each tab has a one-line "you are…" description, 3–6 package cards (price, 2–3 deliverables, "Enquire" which preselects the form, "Details →" to the service page) and a link to the full service page. `?for=brands|d2c|sme|agency|build` opens a specific tab (use it in cold emails and ads). Keyboard arrows work, tab choice is tracked as `persona_select`, and without JS all personas show stacked. Fixed a bug where `?need=` options containing digits (d2c_*) weren't preselected.
+- **Why:** 21 packages in one list was too much; visitors should see only what fits them.
+- **How to judge:** `persona_select` events, package `Enquire` clicks per persona, enquiries by package.
+
 ## Open ideas (not done yet)
 
 - International visitors see INR-only prices and INR-only budget options in the form; "quoted in USD" has no figure. Needs Paresh to supply USD starting prices before anything can change.

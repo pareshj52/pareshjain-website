@@ -392,6 +392,33 @@ textarea{min-height:8rem;resize:vertical}
 @media (max-width:1200px){.sme-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:1000px){.sme-grid,.sme-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.sme-grid,.sme-grid.three{grid-template-columns:1fr}}
+/* Persona tabs (Ways to work with me) */
+.plabel{font-size:.85rem;color:var(--muted);margin:0 0 .75rem}
+.ptabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.ptab{all:unset;box-sizing:border-box;cursor:pointer;min-height:2.9rem;padding:0 1.15rem;display:inline-flex;align-items:center;border-radius:999px;border:1.5px solid var(--line);background:var(--white);font-weight:600;font-size:.98rem;transition:background-color .2s,border-color .2s,color .2s}
+.ptab:hover{border-color:var(--indigo)}
+.ptab[aria-selected="true"]{background:var(--indigo);border-color:var(--indigo);color:var(--white)}
+.ptab:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.ppanel:focus-visible{outline:3px solid var(--saffron);outline-offset:6px;border-radius:.5rem}
+.phead{display:none;margin:0 0 .5rem;font-size:1.5rem;letter-spacing:-.02em}
+.no-tabs .phead{display:block}.no-tabs .ppanel{margin-bottom:3rem}.no-tabs .ptabs,.no-tabs .plabel{display:none}
+.pwho{margin:0 0 1.5rem;color:var(--ink);font-size:1.15rem;max-width:60ch}
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
+.pcard{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:1rem;padding:1.5rem;position:relative}
+.pcard.start{border:2px solid var(--indigo)}
+.pcard.start::before{content:"Best place to start";position:absolute;top:-.8rem;left:1.25rem;background:var(--saffron);color:var(--ink);font-size:.75rem;font-weight:600;padding:.25rem .6rem;border-radius:999px}
+.pcard .tier{margin:0 0 .5rem!important}
+.pcard h4{margin:0 0 .5rem;font-size:1.25rem;letter-spacing:-.015em}
+.pprice{margin:0 0 .6rem;font-size:1.6rem;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.pprice small{font-size:.88rem;font-weight:400;color:var(--muted);letter-spacing:0}
+.pline{margin:0 0 .85rem;color:var(--muted)}
+.pcard ul{margin:0 0 1.25rem;padding-left:1.1rem;color:#2C3150;font-size:.97rem}
+.pcard li{margin-bottom:.3rem}
+.pctas{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
+.pmore{margin:1.5rem 0 0}
+.pnote{margin:.5rem 0 0;color:var(--muted);font-size:.9rem}
+@media (max-width:1000px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.pgrid{grid-template-columns:1fr}.ptabs{flex-wrap:nowrap;overflow-x:auto;margin:0 calc(var(--g)*-1) 1.75rem;padding:0 var(--g) .35rem;scrollbar-width:none}.ptabs::-webkit-scrollbar{display:none}.ptab{flex:0 0 auto}}
 /* #7 Contact: availability badge */
 .contact-head{align-items:flex-end}
 .avail{display:inline-flex;align-items:center;gap:.55rem;margin:0 0 1.25rem;padding:.4rem .9rem;border:1px solid #454C7A;border-radius:999px;font-size:.9rem;color:#C5CADD}
@@ -668,76 +695,41 @@ textarea{min-height:8rem;resize:vertical}
   <section class="sec on-paper" id="services">
     <div class="wrap">
       <h2>Ways to work with me</h2>
-      <p class="sec-sub">Clear prices, a written scope and a fixed fee before anything starts. No long lock-in.</p>
-      <div class="svc">
-        <article>
-          <p class="tier">Project · 2–4 weeks</p>
-          <h3>Campaign &amp; launch plan</h3>
-          <p class="price">From ₹75,000 <small>fixed fee</small></p>
-          <p>One plan every team can work from, from the idea to the channel plan.</p>
-          <ul><li>Proposition, messaging and the big idea</li><li>Channel, creator and influencer plan</li><li>Budget split, KPIs and a measurement plan</li><li>Briefs your agency or in-house team can run with</li></ul>
-          <p class="fit">Good fit if you have a launch, a festive push or a new product, and no single plan yet.</p>
-          <div class="svc-ctas"><a class="btn btn-ink" href="#contact" data-track="svc_plan">Get a quote</a><a class="more-link" href="services/campaign-launch-plan.html">Full details →</a></div>
-        </article>
-        <article class="pick">
-          <p class="tier">Monthly · about 2 days a week</p>
-          <h3>Fractional marketing lead</h3>
-          <p class="price">From ₹1,50,000 <small>a month</small></p>
-          <p>A senior marketing lead on your team, without a full-time hire.</p>
-          <ul><li>Owns the marketing plan and the monthly calendar</li><li>Manages your agencies, creators and freelancers</li><li>Weekly numbers review with the founder or leadership</li><li>Month-to-month after the first 3 months</li></ul>
-          <p class="fit">Good fit for D2C brands and startups that need senior marketing judgement every week.</p>
-          <div class="svc-ctas"><a class="btn btn-sun" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1380Zcu-WXHLTQi5dZqrbtbLfTN_Pl_yzwDjDL7QWRDAgHdRhg_jQIUqrLBvdR7pw_g4_Txei-" target="_blank" rel="noopener" data-track="svc_fractional_call">Book a free call</a><a class="more-link" href="services/fractional-marketing-lead.html">Full details →</a></div>
-        </article>
-        <article>
-          <p class="tier">For agencies · by the day</p>
-          <h3>Pitch &amp; account cover</h3>
-          <p class="price">From ₹15,000 <small>a day</small></p>
-          <p>Senior help for a pitch, a difficult live account or a gap between leads.</p>
-          <ul><li>Pitch strategy, deck story and presenting</li><li>Account and client leadership on live business</li><li>Team set-up, SOPs and status reporting</li><li>White-label if you prefer</li></ul>
-          <p class="fit">Good fit if a pitch is due or a key client needs senior attention this month.</p>
-          <div class="svc-ctas"><a class="btn btn-ink" href="#contact" data-track="svc_agency">Check my availability</a><a class="more-link" href="services/agency-pitch-account-cover.html">Full details →</a></div>
-        </article>
+      <p class="sec-sub">Pick what describes you best. Clear prices, a written scope and a fixed fee before anything starts. No long lock-in.</p>
+      <div class="personas no-tabs" id="personas">
+        <p class="plabel" id="plabel">Which describes you best?</p>
+        <div class="ptabs" role="tablist" aria-labelledby="plabel"><button type="button" role="tab" class="ptab" id="tab-brands" aria-controls="panel-brands" aria-selected="true" data-persona="brands">Brands &amp; startups</button><button type="button" role="tab" class="ptab" id="tab-d2c" aria-controls="panel-d2c" aria-selected="false" data-persona="d2c" tabindex="-1">D2C &amp; consumer brands</button><button type="button" role="tab" class="ptab" id="tab-sme" aria-controls="panel-sme" aria-selected="false" data-persona="sme" tabindex="-1">Small businesses &amp; MSMEs</button><button type="button" role="tab" class="ptab" id="tab-agency" aria-controls="panel-agency" aria-selected="false" data-persona="agency" tabindex="-1">Agencies</button><button type="button" role="tab" class="ptab" id="tab-build" aria-controls="panel-build" aria-selected="false" data-persona="build" tabindex="-1">Websites &amp; creative</button></div>
+        <div class="ppanel" role="tabpanel" id="panel-brands" aria-labelledby="tab-brands" tabindex="0">
+          <h3 class="phead">Brands &amp; startups</h3>
+          <p class="pwho">You lead marketing at a growing brand or startup and need senior campaign leadership, without a full-time hire.</p>
+          <div class="pgrid"><article class="pcard start"><p class="tier">Project · 2–4 weeks</p><h4>Campaign &amp; launch plan</h4><p class="pprice">From ₹75,000 <small>fixed fee</small></p><p class="pline">One plan every team can work from, idea to channel plan.</p><ul><li>Proposition, messaging and the big idea</li><li>Channel, creator and budget plan</li><li>Briefs your agency can run with</li></ul><div class="pctas"><a class="btn btn-sun" href="?need=plan#contact" data-track="p_brands_plan">Enquire</a><a class="more-link" href="services/campaign-launch-plan.html">Details →</a></div></article><article class="pcard"><p class="tier">Monthly · about 2 days a week</p><h4>Fractional marketing lead</h4><p class="pprice">From ₹1,50,000 <small>a month</small></p><p class="pline">A senior marketing lead on your team.</p><ul><li>Owns the plan and monthly calendar</li><li>Manages agencies, creators, freelancers</li><li>Weekly numbers review with leadership</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=fractional#contact" data-track="p_brands_fractional">Enquire</a><a class="more-link" href="services/fractional-marketing-lead.html">Details →</a></div></article><article class="pcard"><p class="tier">2 weeks</p><h4>Agency &amp; ads audit</h4><p class="pprice">₹49,999 <small>fixed fee</small></p><p class="pline">An independent verdict on your agency, ads and funnel.</p><ul><li>Read-only review of Meta and Google</li><li>Platform claims vs. actual orders</li><li>Keep, fix or replace, with a 90-day plan</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=d2c_audit#contact" data-track="p_brands_d2c_audit">Enquire</a><a class="more-link" href="services/d2c-brand-growth.html#d2c_audit">Details →</a></div></article></div>
+          <p class="pmore"><a class="more-link" href="services/campaign-launch-plan.html">See campaign &amp; fractional details →</a></p>
+        </div><div class="ppanel" role="tabpanel" id="panel-d2c" aria-labelledby="tab-d2c" tabindex="0">
+          <h3 class="phead">D2C &amp; consumer brands</h3>
+          <p class="pwho">You sell online or on marketplaces and want to know what’s working before you spend more.</p>
+          <div class="pgrid"><article class="pcard start"><p class="tier">2 weeks</p><h4>Agency &amp; ads audit</h4><p class="pprice">₹49,999 <small>fixed fee</small></p><p class="pline">Is your agency working? An independent answer.</p><ul><li>Ads, funnel and attribution review</li><li>Agency scope and fees vs. results</li><li>A clear 30-60-90 day plan</li></ul><div class="pctas"><a class="btn btn-sun" href="?need=d2c_audit#contact" data-track="p_d2c_d2c_audit">Enquire</a><a class="more-link" href="services/d2c-brand-growth.html#d2c_audit">Details →</a></div></article><article class="pcard"><p class="tier">2–3 weeks</p><h4>Creator &amp; influencer plan</h4><p class="pprice">₹49,999 <small>fixed fee</small></p><p class="pline">A creator campaign built to sell, not just get views.</p><ul><li>Creator mix and selection criteria</li><li>Briefs, budget and usage rights</li><li>Tracking: codes, links, success measures</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=d2c_creator#contact" data-track="p_d2c_d2c_creator">Enquire</a><a class="more-link" href="services/d2c-brand-growth.html#d2c_creator">Details →</a></div></article><article class="pcard"><p class="tier">2–3 weeks</p><h4>Quick-commerce &amp; marketplace plan</h4><p class="pprice">₹59,999 <small>fixed fee</small></p><p class="pline">Blinkit, Zepto, Instamart or Amazon: where to sell and spend.</p><ul><li>Platforms, cities and SKUs first</li><li>Spend plan against fees and minimums</li><li>90-day test with stop and scale rules</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=d2c_qcomm#contact" data-track="p_d2c_d2c_qcomm">Enquire</a><a class="more-link" href="services/d2c-brand-growth.html#d2c_qcomm">Details →</a></div></article><article class="pcard"><p class="tier">1–2 weeks</p><h4>Shopify store refresh</h4><p class="pprice">₹34,999 <small>fixed fee</small></p><p class="pline">Fix the pages that lose sales.</p><ul><li>Home, product, cart and checkout review</li><li>Redesigned home and product pages</li><li>Speed and tracking checked</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=web_refresh#contact" data-track="p_d2c_web_refresh">Enquire</a><a class="more-link" href="services/website-development.html#web_refresh">Details →</a></div></article></div>
+          <p class="pmore"><a class="more-link" href="services/d2c-brand-growth.html">See all D2C projects →</a></p>
+        </div><div class="ppanel" role="tabpanel" id="panel-sme" aria-labelledby="tab-sme" tabindex="0">
+          <h3 class="phead">Small businesses &amp; MSMEs</h3>
+          <p class="pwho">You run a shop, clinic, factory or service business and want senior advice at a small-business price.</p>
+          <div class="pgrid"><article class="pcard"><p class="tier">90-minute call</p><h4>Strategy session</h4><p class="pprice">₹4,999 <small>one-off</small></p><p class="pline">A senior second opinion on your biggest question.</p><ul><li>Video call about your business</li><li>Written top 5 actions in 2 days</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=sme_session#contact" data-track="p_sme_sme_session">Enquire</a><a class="more-link" href="services/small-business-marketing.html#sme_session">Details →</a></div></article><article class="pcard start"><p class="tier">1 week</p><h4>Marketing health check</h4><p class="pprice">₹14,999 <small>fixed fee</small></p><p class="pline">What’s working, what isn’t, and what to fix first.</p><ul><li>Website, Google, social and ads reviewed</li><li>3 competitors compared</li><li>A 90-day action plan and walkthrough</li></ul><div class="pctas"><a class="btn btn-sun" href="?need=sme_audit#contact" data-track="p_sme_sme_audit">Enquire</a><a class="more-link" href="services/small-business-marketing.html#sme_audit">Details →</a></div></article><article class="pcard"><p class="tier">1 week</p><h4>Local visibility plan</h4><p class="pprice">₹19,999 <small>fixed fee</small></p><p class="pline">Get found on Google Maps, Search and WhatsApp.</p><ul><li>Google Business Profile and reviews</li><li>Listings on Justdial, IndiaMART and more</li><li>WhatsApp Business set-up plan</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=sme_local#contact" data-track="p_sme_sme_local">Enquire</a><a class="more-link" href="services/small-business-marketing.html#sme_local">Details →</a></div></article><article class="pcard"><p class="tier">2 weeks</p><h4>Launch &amp; festive sprint</h4><p class="pprice">₹34,999 <small>fixed fee</small></p><p class="pline">One campaign plan sized for a small budget.</p><ul><li>Offer, message and channel mix</li><li>4-week posting calendar</li><li>A plan to bring buyers back</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=sme_sprint#contact" data-track="p_sme_sme_sprint">Enquire</a><a class="more-link" href="services/small-business-marketing.html#sme_sprint">Details →</a></div></article><article class="pcard"><p class="tier">Monthly</p><h4>Monthly marketing advisor</h4><p class="pprice">₹39,999 <small>a month</small></p><p class="pline">Someone senior steering your marketing.</p><ul><li>2 strategy calls a month</li><li>WhatsApp access on working days</li><li>Feedback on your agency or freelancer</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=sme_advisor#contact" data-track="p_sme_sme_advisor">Enquire</a><a class="more-link" href="services/small-business-marketing.html#sme_advisor">Details →</a></div></article></div>
+          <p class="pmore"><a class="more-link" href="services/small-business-marketing.html">See all small business packages →</a></p>
+        </div><div class="ppanel" role="tabpanel" id="panel-agency" aria-labelledby="tab-agency" tabindex="0">
+          <h3 class="phead">Agencies</h3>
+          <p class="pwho">You run or lead an agency, in India or abroad, and need senior help for a pitch, an account or a gap. White-label if you prefer.</p>
+          <div class="pgrid"><article class="pcard start"><p class="tier">5 working days</p><h4>Pitch sprint</h4><p class="pprice">₹70,000 <small>fixed fee</small></p><p class="pline">Senior strategy and story for one pitch.</p><ul><li>Insight, strategy and big idea</li><li>Deck story and rehearsal</li><li>Presenting, or behind the scenes</li></ul><div class="pctas"><a class="btn btn-sun" href="?need=agency_sprint#contact" data-track="p_agency_agency_sprint">Enquire</a><a class="more-link" href="services/agency-pitch-account-cover.html#agency_sprint">Details →</a></div></article><article class="pcard"><p class="tier">By the day</p><h4>Senior cover day</h4><p class="pprice">₹15,000 <small>a day</small></p><p class="pline">Flexible senior help when you need it.</p><ul><li>Account and client leadership</li><li>Workshops, briefs and reviews</li><li>Status and stakeholder meetings</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=agency#contact" data-track="p_agency_agency">Enquire</a><a class="more-link" href="services/agency-pitch-account-cover.html#agency">Details →</a></div></article><article class="pcard"><p class="tier">Monthly · 8 days</p><h4>Interim account lead</h4><p class="pprice">₹1,20,000 <small>a month</small></p><p class="pline">Steady a key client while you hire.</p><ul><li>Owns the client relationship</li><li>Team briefing, SOPs, quality checks</li><li>Handover plan for your new hire</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=agency_interim#contact" data-track="p_agency_agency_interim">Enquire</a><a class="more-link" href="services/agency-pitch-account-cover.html#agency_interim">Details →</a></div></article></div>
+          <p class="pmore"><a class="more-link" href="services/agency-pitch-account-cover.html">See agency details →</a></p><p class="pnote">Agencies outside India are quoted in USD.</p>
+        </div><div class="ppanel" role="tabpanel" id="panel-build" aria-labelledby="tab-build" tabindex="0">
+          <h3 class="phead">Websites &amp; creative</h3>
+          <p class="pwho">You need it made: a website, an online store, a brand look or creatives, briefed by a campaign lead.</p>
+          <div class="pgrid"><article class="pcard"><p class="tier">5–7 days</p><h4>AI-built landing page</h4><p class="pprice">₹24,999 <small>fixed fee</small></p><p class="pline">A fast 1–3 page site with tracking set up.</p><ul><li>Copy written for you</li><li>Enquiry form and WhatsApp</li><li>GA4 and Meta Pixel</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=web_ai#contact" data-track="p_build_web_ai">Enquire</a><a class="more-link" href="services/website-development.html#web_ai">Details →</a></div></article><article class="pcard start"><p class="tier">2–3 weeks</p><h4>WordPress website</h4><p class="pprice">₹39,999 <small>fixed fee</small></p><p class="pline">Up to 8 pages you can edit yourself.</p><ul><li>Enquiry form, WhatsApp and Maps</li><li>Speed, SEO and tracking basics</li><li>Training video for your team</li></ul><div class="pctas"><a class="btn btn-sun" href="?need=web_wp#contact" data-track="p_build_web_wp">Enquire</a><a class="more-link" href="services/website-development.html#web_wp">Details →</a></div></article><article class="pcard"><p class="tier">2–3 weeks</p><h4>Shopify starter store</h4><p class="pprice">₹59,999 <small>fixed fee</small></p><p class="pline">A launch-ready store for a small catalogue.</p><ul><li>Up to 30 products uploaded</li><li>Payments, shipping and key apps</li><li>Tracking and handover</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=web_shopify#contact" data-track="p_build_web_shopify">Enquire</a><a class="more-link" href="services/website-development.html#web_shopify">Details →</a></div></article><article class="pcard"><p class="tier">2 weeks</p><h4>Logo &amp; brand kit</h4><p class="pprice">₹24,999 <small>fixed fee</small></p><p class="pline">A simple, professional identity.</p><ul><li>Logo, colours and fonts</li><li>1-page brand guide</li><li>Social templates and business card</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=cr_brand#contact" data-track="p_build_cr_brand">Enquire</a><a class="more-link" href="services/creative-services.html#cr_brand">Details →</a></div></article><article class="pcard"><p class="tier">Monthly</p><h4>Social creatives</h4><p class="pprice">₹29,999 <small>a month</small></p><p class="pline">A month of on-brand posts around your offers.</p><ul><li>12 posts and 4 reels</li><li>Monthly plan and captions</li><li>Ready-to-post files</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=cr_social#contact" data-track="p_build_cr_social">Enquire</a><a class="more-link" href="services/creative-services.html#cr_social">Details →</a></div></article><article class="pcard"><p class="tier">1–2 weeks</p><h4>Ad creative pack</h4><p class="pprice">₹39,999 <small>fixed fee</small></p><p class="pline">Fresh Meta and Google ads to test.</p><ul><li>10 static ads in all sizes</li><li>3 short video ads</li><li>Copy variations and test plan</li></ul><div class="pctas"><a class="btn btn-ink" href="?need=cr_ads#contact" data-track="p_build_cr_ads">Enquire</a><a class="more-link" href="services/creative-services.html#cr_ads">Details →</a></div></article></div>
+          <p class="pmore"><a class="more-link" href="services/website-development.html">See website packages →</a></p>
+        </div>
       </div>
+
       <div class="freebie">
         <div><p class="tier">Free · 30 minutes</p><h3>Not sure what you need? Start with a free review call.</h3><p>Bring your plan, your last campaign or just the problem. You leave with three specific fixes, whether or not we work together.</p></div>
         <a class="orb orb-sun magnetic" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1380Zcu-WXHLTQi5dZqrbtbLfTN_Pl_yzwDjDL7QWRDAgHdRhg_jQIUqrLBvdR7pw_g4_Txei-" target="_blank" rel="noopener" data-track="free_review_call"><span>Book a<br>free call</span></a>
-      </div>
-      <div class="sme" id="small-business">
-        <div class="sme-head">
-          <div><p class="tier">For small businesses &amp; MSMEs</p><h3>Smaller budget? Start with a fixed-price package.</h3></div>
-          <a class="more-link" href="services/small-business-marketing.html">See all small business packages →</a>
-        </div>
-        <div class="sme-grid">
-          <a class="sme-card" href="services/small-business-marketing.html#sme_session" data-track="sme_session"><span>90-min call</span><b>Strategy session</b><em>₹4,999</em><i>Your top 5 actions, in writing.</i></a>
-          <a class="sme-card pick" href="services/small-business-marketing.html#sme_audit" data-track="sme_audit"><span>1 week</span><b>Marketing health check</b><em>₹14,999</em><i>Website, Google, social and ads reviewed, plus a 90-day plan.</i></a>
-          <a class="sme-card" href="services/small-business-marketing.html#sme_local" data-track="sme_local"><span>1 week</span><b>Local visibility plan</b><em>₹19,999</em><i>Google listing, reviews and WhatsApp, sorted.</i></a>
-          <a class="sme-card" href="services/small-business-marketing.html#sme_sprint" data-track="sme_sprint"><span>2 weeks</span><b>Launch &amp; festive sprint</b><em>₹34,999</em><i>One campaign plan sized for small budgets.</i></a>
-          <a class="sme-card" href="services/small-business-marketing.html#sme_advisor" data-track="sme_advisor"><span>Monthly</span><b>Marketing advisor</b><em>₹39,999<small>/month</small></em><i>2 strategy calls a month and WhatsApp access.</i></a>
-        </div>
-      </div>
-      <div class="sme" id="d2c-projects">
-        <div class="sme-head">
-          <div><p class="tier">For D2C &amp; consumer brands</p><h3>Fixed-price projects for the questions founders keep asking.</h3></div>
-          <a class="more-link" href="services/d2c-brand-growth.html">See D2C projects →</a>
-        </div>
-        <div class="sme-grid three">
-          <a class="sme-card pick" href="services/d2c-brand-growth.html#d2c_audit" data-track="d2c_audit"><span>2 weeks</span><b>Agency &amp; ads audit</b><em>₹49,999</em><i>Is your agency working? An independent verdict and a 90-day plan.</i></a>
-          <a class="sme-card" href="services/d2c-brand-growth.html#d2c_creator" data-track="d2c_creator"><span>2–3 weeks</span><b>Creator &amp; influencer plan</b><em>₹49,999</em><i>A creator campaign built to sell, with briefs and tracking.</i></a>
-          <a class="sme-card" href="services/d2c-brand-growth.html#d2c_qcomm" data-track="d2c_qcomm"><span>2–3 weeks</span><b>Quick-commerce plan</b><em>₹59,999</em><i>Blinkit, Zepto, Instamart or Amazon: where to sell and spend.</i></a>
-        </div>
-      </div>
-      <div class="sme" id="creative-web">
-        <div class="sme-head">
-          <div><p class="tier">Creative &amp; websites</p><h3>Need it made, not just planned? Fixed-price creative and websites.</h3></div>
-          <div class="sme-links"><a class="more-link" href="services/website-development.html">Website packages →</a><a class="more-link" href="services/creative-services.html">Creative packages →</a></div>
-        </div>
-        <div class="sme-grid">
-          <a class="sme-card" href="services/website-development.html#web_ai" data-track="web_ai"><span>5–7 days</span><b>AI-built landing page</b><em>₹24,999</em><i>A fast 1–3 page site with tracking set up.</i></a>
-          <a class="sme-card" href="services/website-development.html#web_wp" data-track="web_wp"><span>2–3 weeks</span><b>WordPress website</b><em>₹39,999</em><i>Up to 8 pages you can edit yourself.</i></a>
-          <a class="sme-card" href="services/website-development.html#web_shopify" data-track="web_shopify"><span>2–3 weeks</span><b>Shopify starter store</b><em>₹59,999</em><i>Launch-ready store, up to 30 products.</i></a>
-          <a class="sme-card" href="services/creative-services.html#cr_brand" data-track="cr_brand"><span>2 weeks</span><b>Logo &amp; brand kit</b><em>₹24,999</em><i>Logo, colours, fonts and templates.</i></a>
-          <a class="sme-card" href="services/creative-services.html#cr_social" data-track="cr_social"><span>Monthly</span><b>Social creatives</b><em>₹29,999<small>/month</small></em><i>12 posts and 4 reels, planned around your offers.</i></a>
-        </div>
       </div>
       <p class="sec-sub small">Teams outside India are quoted in USD. Prices exclude GST and any media or production spend.</p>
     </div>
@@ -942,9 +934,43 @@ textarea{min-height:8rem;resize:vertical}
     track(name, {cta:t});
   });
 
+  // Persona tabs in "Ways to work with me" (?for=brands|d2c|sme|agency|build preselects one)
+  var ptabs=[].slice.call(d.querySelectorAll('.ptab'));
+  if(ptabs.length){
+    d.getElementById('personas').classList.remove('no-tabs');
+    function pick(btn, focus, silent){
+      ptabs.forEach(function(t){ var on=t===btn; t.setAttribute('aria-selected',String(on)); t.tabIndex=on?0:-1; d.getElementById(t.getAttribute('aria-controls')).hidden=!on; });
+      var bar=btn.parentNode; if(bar.scrollWidth>bar.clientWidth) bar.scrollLeft=btn.offsetLeft-bar.offsetLeft-24;
+      if(focus) btn.focus();
+      if(!silent) track('persona_select',{persona:btn.dataset.persona});
+    }
+    ptabs.forEach(function(t,i){
+      t.addEventListener('click',function(){ pick(t); });
+      t.addEventListener('keydown',function(e){
+        var k=e.key, n=null;
+        if(k==='ArrowRight') n=ptabs[(i+1)%ptabs.length];
+        else if(k==='ArrowLeft') n=ptabs[(i-1+ptabs.length)%ptabs.length];
+        else if(k==='Home') n=ptabs[0]; else if(k==='End') n=ptabs[ptabs.length-1];
+        if(n){ e.preventDefault(); pick(n,true); }
+      });
+    });
+    var want=null; try{ want=new URLSearchParams(location.search).get('for'); }catch(e){}
+    var start=ptabs.filter(function(t){ return t.dataset.persona===want; })[0]||ptabs[0];
+    pick(start,false,true);
+  }
+  // "Enquire" on a package: preselect it in the form without reloading
+  d.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="?need="]'); if(!a) return;
+    var v=a.getAttribute('href').split('need=')[1].split('#')[0], ns=d.getElementById('f-need');
+    var o=ns&&ns.querySelector('option[value="'+v.replace(/[^a-z0-9_]/g,'')+'"]'); if(!o) return;
+    e.preventDefault(); ns.value=o.value;
+    d.getElementById('contact').scrollIntoView({behavior:reduce?'auto':'smooth'});
+    setTimeout(function(){ try{ d.getElementById('f-name').focus({preventScroll:true}); }catch(err){} }, reduce?0:600);
+  });
+
   // Preselect the 'What do you need?' option from ?need= (links from service pages)
   try{ var nq=new URLSearchParams(location.search).get('need'), ns=d.getElementById('f-need');
-    if(nq&&ns){ if(nq==='sme'){ nq='sme_audit'; } var o=ns.querySelector('option[value="'+nq.replace(/[^a-z_]/g,'')+'"]'); if(o) ns.value=o.value; } }catch(e){}
+    if(nq&&ns){ if(nq==='sme'){ nq='sme_audit'; } var o=ns.querySelector('option[value="'+nq.replace(/[^a-z0-9_]/g,'')+'"]'); if(o) ns.value=o.value; } }catch(e){}
 
   // Form
   var form=d.getElementById('brief'), send=d.getElementById('f-send'), started=false;

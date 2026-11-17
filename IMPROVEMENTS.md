@@ -39,9 +39,14 @@ One focused improvement per week, shipped as a PR for Paresh to approve. Read th
 - **Why:** Ready for Google/Meta ads (incl. UK/EU) and for being cited by AI search.
 - **How to judge:** GA4 Realtime shows page views and `generate_lead`; Meta Events Manager shows PageView/Lead once the Pixel ID is set.
 
+## 2026-11-17 — Real logos and creatives from Paresh's portfolio
+
+- **What:** Took assets from "Paresh_Jain_Portfolio.pdf" (from Gmail, the compressed copy of "Paresh's Portfolio '26"). The brand row is now a wall of 27 real brand logos plus 5 agency logos (`assets/logos/`), replacing Simple Icons and plain-text names. New "Creative from campaigns I've led" gallery on the home page and the creative services page, 9 pieces (`assets/work/`). Case rows for Bata, Himalayan, Honda, M3M and CoinDCX now show real visuals. CoinDCX case unhidden with agency/date corrected to Alchemist, May–Jul 2021 (per portfolio + resume). "17 brands" changed to "30+ brands". Dead CSS removed (.brand-list, .svc, .sme-*). llms.txt updated.
+- **Why:** The site sold creative and campaigns with almost no visible work; the portfolio already had it.
+- **How to judge:** Time on page, `case_open` events, enquiries mentioning creative.
+
 ## Open ideas (not done yet)
 
 - International visitors see INR-only prices and INR-only budget options in the form; "quoted in USD" has no figure. Needs Paresh to supply USD starting prices before anything can change.
-- Campaign images for "Launches & results" (needs approved images from Paresh).
 - AI or new real portraits in other setups (blocked: sandbox can't reach canva.com).
 - No client testimonial or named case-study result on the page yet — needs Paresh to supply an approved quote.

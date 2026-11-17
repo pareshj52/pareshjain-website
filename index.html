@@ -122,9 +122,11 @@ button{font:inherit;color:inherit}
 .globe{width:3.4rem;height:3.4rem;border-radius:50%;background:var(--indigo-2);display:grid;place-items:center;flex:none}
 .globe svg{width:1.7rem;height:1.7rem}
 @media (prefers-reduced-motion:no-preference){.globe svg{animation:spin 14s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}}
-.hero-right{position:absolute;left:70.5%;top:31%;width:min(24rem,26vw)}
+.hero-right{position:absolute;left:70.5%;top:25%;width:min(24rem,26vw);z-index:2}
 .hero-right .arrow{width:1.4rem;height:1.4rem;margin-bottom:1.5rem}
-.role{font-size:clamp(1.35rem,2.3vw,2.1rem);line-height:1.25;margin:0 0 2rem;font-weight:400}
+.role{font-size:clamp(1.35rem,2.3vw,2.1rem);line-height:1.25;margin:0 0 1rem;font-weight:400}
+.proof{font-size:.95rem;line-height:1.45;color:#C5CADD;margin:0 0 1.75rem;padding-left:.85rem;border-left:2px solid var(--saffron)}
+.proof b{color:var(--white);font-weight:600}
 .hero-right .orb{--s:8.5rem}
 .marquee{position:absolute;left:0;right:0;bottom:clamp(1rem,4vh,3rem);white-space:nowrap;pointer-events:none;user-select:none}
 .marquee-track{display:inline-flex;will-change:transform}
@@ -143,7 +145,8 @@ button{font:inherit;color:inherit}
   .globe{width:2.8rem;height:2.8rem}
   .hero-right{padding:1.75rem var(--g) 0}
   .hero-right .arrow{display:none}
-  .role{margin-bottom:1.5rem}
+  .role{margin-bottom:1rem}
+  .proof{margin-bottom:1.5rem}
   .hero-right .orb{display:none}
   .hero-mobile{display:flex;flex-wrap:wrap;gap:.75rem;padding:0 var(--g) 1.5rem}
   .marquee{position:relative;bottom:auto;padding:1rem 0 1.5rem}
@@ -374,6 +377,7 @@ textarea{min-height:8rem;resize:vertical}
     <div class="hero-right">
       <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 8v11H8"/></svg>
       <p class="role">Senior marketing &amp; campaign lead for brands and agencies, without the full-time hire</p>
+      <p class="proof">11+ years at <b>WPP/VML, FCB Kinnect, Schbang and Cheil</b> on Amazon, Bata, Ford and Honda</p>
       <a class="orb orb-sun magnetic" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1380Zcu-WXHLTQi5dZqrbtbLfTN_Pl_yzwDjDL7QWRDAgHdRhg_jQIUqrLBvdR7pw_g4_Txei-" target="_blank" rel="noopener" data-track="hero_orb_call"><span>Free<br>30-min call</span></a>
     </div>
 

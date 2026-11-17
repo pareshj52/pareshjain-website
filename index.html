@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/paresh-jain-cutout.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/paresh-jain-hero-1400.webp" imagesrcset="assets/paresh-jain-hero-700.webp 700w, assets/paresh-jain-hero-1400.webp 1400w" imagesizes="(max-width:900px) 26rem, 46vw" fetchpriority="high">
 
 <!-- ===== Tracking config: paste your Meta Pixel ID between the quotes to switch it on ===== -->
 <script>window.PJ = { GA4: 'G-XV39SFSW40', META_PIXEL: '' };</script>
@@ -335,6 +335,12 @@ textarea{min-height:8rem;resize:vertical}
 .opt{color:#959CC0;font-weight:400}
 @media (max-width:900px){.svc article.pick::before{left:0}.freebie{grid-template-columns:1fr}.freebie .orb{--s:7.5rem}}
 
+/* Hero portrait: framed arch artwork (edges are finished in the image, so no CSS fade masks) */
+.hero-photo{aspect-ratio:700/823;z-index:0}
+.marquee{z-index:-1}
+.hero-left{z-index:1}
+.hero-photo img{-webkit-mask-image:none;mask-image:none}
+@media (max-width:900px){.hero-photo{aspect-ratio:700/823;width:min(88%,26rem)}.hero-photo img{-webkit-mask-image:none;mask-image:none}}
 /* ===== Visual refresh (preview) ===== */
 /* #4 Display type: use Archivo's wide axis for big headings */
 .sec h2,.work-head h2,.contact h2,.case-brand,.num b{font-variation-settings:"wdth" 118;font-weight:600;letter-spacing:-.045em}
@@ -408,7 +414,7 @@ textarea{min-height:8rem;resize:vertical}
 <main id="main">
   <section class="hero" id="top">
     <h1>Paresh Jain, freelance marketing and campaign lead in New Delhi</h1>
-    <div class="hero-photo"><img src="assets/paresh-jain-cutout.webp" alt="Paresh Jain" width="760" height="823" fetchpriority="high"></div>
+    <div class="hero-photo"><img src="assets/paresh-jain-hero-1400.webp" srcset="assets/paresh-jain-hero-700.webp 700w, assets/paresh-jain-hero-1400.webp 1400w" sizes="(max-width:900px) 26rem, 46vw" alt="Paresh Jain" width="700" height="823" fetchpriority="high"></div>
 
     <div class="hero-left">
       <div class="pill">

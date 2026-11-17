@@ -27,6 +27,12 @@ One focused improvement per week, shipped as a PR for Paresh to approve. Read th
 - **Why:** 21 packages in one list was too much; visitors should see only what fits them.
 - **How to judge:** `persona_select` events, package `Enquire` clicks per persona, enquiries by package.
 
+## 2026-11-17 — Site wiring pass (preview)
+
+- **What:** Branded `404.html` (links to home, services and every service page; GA4 `page_not_found` event). "Services" link now visible in the mobile header on every page. Service-page breadcrumbs and nav open the matching persona tab on the home page (`/?for=…#services`), plus a "Compare all packages" link. Checked every internal link, anchor, `?need=` and `?for=` value across all 11 pages: none broken.
+- **Why:** Mobile visitors had no way to reach the services from the header; dead links showed Vercel's default 404.
+- **How to judge:** `page_not_found` events stay near zero; service-page visits from mobile go up.
+
 ## Open ideas (not done yet)
 
 - International visitors see INR-only prices and INR-only budget options in the form; "quoted in USD" has no figure. Needs Paresh to supply USD starting prices before anything can change.

@@ -224,7 +224,11 @@ def e(s):
     return html.escape(s, quote=True)
 
 
+PERSONA = {"campaign-launch-plan": "brands", "fractional-marketing-lead": "brands", "agency-pitch-account-cover": "agency", "d2c-brand-growth": "d2c", "website-development": "build", "creative-services": "build", "small-business-marketing": "sme"}
+
+
 def page(s):
+    hub = f"/?for={PERSONA[s['slug']]}#services"
     url = f"{SITE}/services/{s['slug']}.html"
     others = "".join(
         f'<a href="/services/{o["slug"]}.html"><b>{e(o["nav"])}</b><span>{e(o["short"])}</span></a>'
@@ -322,7 +326,7 @@ def page(s):
     <a class="brand" href="/">Paresh Jain</a>
     <nav class="nav" aria-label="Main">
       <a href="/#work">Work</a>
-      <a href="/#services">Services &amp; prices</a>
+      <a class="mob-keep" href="{hub}"><span class="lg">Services &amp; prices</span><span class="sm">Services</span></a>
       <a href="/services/small-business-marketing.html">Small business</a>
       <a class="btn btn-sun" href="{BOOK}" target="_blank" rel="noopener" data-track="svcpage_nav_call">Book a free call</a>
     </nav>
@@ -332,7 +336,7 @@ def page(s):
 <main id="main">
 <section class="s-hero">
   <div class="wrap">
-    <p class="crumb"><a href="/">Home</a> / <a href="/#services">Services</a> / {e(s['nav'])}</p>
+    <p class="crumb"><a href="/">Home</a> / <a href="{hub}">Services</a> / {e(s['nav'])}</p>
     <p class="tier">{e(s['tier'])}</p>
     <h1>{e(s['title'])}</h1>
     <p class="lede">{e(s['lede'])}</p>
@@ -369,7 +373,7 @@ def page(s):
     <h2>Work I’ve led</h2>
     <p class="sub">Campaigns from 11+ years inside WPP/VML, FCB Kinnect, Schbang and Cheil.</p>
     <div class="proof">{proof}</div>
-    <p class="more"><a href="/#work">See all launches and results →</a></p>
+    <p class="more"><a href="/#work">See all launches and results →</a> · <a href="{hub}">Compare all packages →</a></p>
   </div>
 </section>
 

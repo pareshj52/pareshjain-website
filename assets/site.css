@@ -149,3 +149,7 @@ h1,h2,.price-big{font-variation-settings:"wdth" 118;font-weight:600;letter-spaci
 .tier.muted{color:var(--muted)}
 .pkg .why{font-size:.9rem;color:var(--ink);background:#FFF4E6;border-left:3px solid var(--saffron);padding:.55rem .75rem;border-radius:.4rem}
 .pkg{scroll-margin-top:1.5rem}
+.nav .sm{display:none}
+@media (max-width:820px){.nav a.mob-keep{display:inline;font-size:.95rem}.nav .lg{display:none}.nav .sm{display:inline}}
+.brand,.btn{white-space:nowrap}
+@media (max-width:420px){.nav{gap:.9rem}.nav .btn{padding:0 .9rem;font-size:.9rem}}

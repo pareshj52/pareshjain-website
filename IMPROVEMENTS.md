@@ -45,6 +45,23 @@ One focused improvement per week, shipped as a PR for Paresh to approve. Read th
 - **Why:** The site sold creative and campaigns with almost no visible work; the portfolio already had it.
 - **How to judge:** Time on page, `case_open` events, enquiries mentioning creative.
 
+## 2026-11-18 — Positioning: experienced, multi-category partner business owners can trust (preview)
+
+- **What:** New positioning: "11 years inside India's top agencies. Now on your side of the table." The hero headline is now a visible H1, and the page title, description and OG tags have been updated to match. New sections:
+  - **Why me:** a fair comparison of a typical agency set-up vs working with Paresh, 6 rows.
+  - **Experience:** 11 categories, each with portfolio logos and a factual result where one exists; collapses to 5 on mobile with "See all".
+  - **About:** a short story plus a career timeline from his resume.
+  - **How I work:** four promises (you deal with me, straight answers, fixed scope and price, numbers you can check) above the 3-step process.
+
+  Other changes:
+  - Numbers band is now 11+ years, 30+ brands, 11 categories, 3 award-winning campaigns.
+  - FAQ leads with owner objections (why not an agency, my category, my existing agency, burnt before).
+  - Contact headline changed to "Tell me what's not working. I'll tell you what I'd do."
+  - Nav now reads Why me / Work / About / Services.
+  - llms.txt summary updated.
+- **Why:** Paresh wants to be seen as a seasoned, multi-category professional that owners trust over the agencies that keep approaching them.
+- **How to judge:** Scroll depth to #why/#experience, `persona_select`, enquiries and calls from business owners.
+
 ## Open ideas (not done yet)
 
 - International visitors see INR-only prices and INR-only budget options in the form; "quoted in USD" has no figure. Needs Paresh to supply USD starting prices before anything can change.

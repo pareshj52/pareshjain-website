@@ -286,6 +286,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--saffron)
 textarea{min-height:8rem;resize:vertical}
 .form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem}
 .form-foot small{color:#AEB4CC}
+.field .hint{display:block;margin-top:.4rem;font-size:.85rem;color:#AEB4CC}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr}.contact-side{padding-top:0}.rule{margin:4.5rem 0 5.5rem}.rule .orb{--s:7.25rem;right:0}}
 @media (max-width:560px){form{grid-template-columns:1fr}}
@@ -777,13 +778,20 @@ textarea{min-height:8rem;resize:vertical}
           <div class="field"><label for="f-name">Your name</label><input id="f-name" type="text" name="name" required autocomplete="name"></div>
           <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
           <div class="field"><label for="f-need">What do you need?</label>
-            <select id="f-need" name="need" required><option value="">Choose one</option><option value="plan">A campaign or launch plan</option><option value="fractional">A fractional marketing lead</option><option value="agency">Agency: senior cover by the day</option><option value="agency_sprint">Agency: pitch sprint (₹70,000)</option><option value="agency_interim">Agency: interim account lead</option><option value="d2c_audit">D2C: agency &amp; ads audit (₹49,999)</option><option value="d2c_creator">D2C: creator &amp; influencer plan (₹49,999)</option><option value="d2c_qcomm">D2C: quick-commerce &amp; marketplace plan (₹59,999)</option><option value="sme_session">Small business: strategy session (₹4,999)</option><option value="sme_audit">Small business: marketing health check (₹14,999)</option><option value="sme_local">Small business: local visibility plan (₹19,999)</option><option value="sme_sprint">Small business: launch &amp; festive sprint (₹34,999)</option><option value="sme_advisor">Small business: monthly advisor (₹39,999/month)</option><option value="web_ai">Website: AI-built landing page (₹24,999)</option><option value="web_wp">Website: WordPress site (₹39,999)</option><option value="web_shopify">Website: Shopify starter store (₹59,999)</option><option value="web_refresh">Website: Shopify store refresh (₹34,999)</option><option value="web_care">Website: care plan (₹7,999/month)</option><option value="cr_brand">Creative: logo &amp; brand kit (₹24,999)</option><option value="cr_social">Creative: monthly social creatives (₹29,999/month)</option><option value="cr_ads">Creative: ad creative pack (₹39,999)</option><option>Not sure yet: a free review call</option></select></div>
+            <select id="f-need" name="need" required aria-describedby="f-need-hint"><option value="">Choose one</option><option>Not sure yet: a free review call</option>
+              <optgroup label="Brands &amp; startups"><option value="plan">A campaign or launch plan (from ₹75,000)</option><option value="fractional">A fractional marketing lead (from ₹1,50,000/month)</option></optgroup>
+              <optgroup label="D2C &amp; consumer brands"><option value="d2c_audit">D2C agency &amp; ads audit (₹49,999)</option><option value="d2c_creator">Creator &amp; influencer plan (₹49,999)</option><option value="d2c_qcomm">Quick-commerce &amp; marketplace plan (₹59,999)</option></optgroup>
+              <optgroup label="Small businesses &amp; MSMEs"><option value="sme_session">Strategy session (₹4,999)</option><option value="sme_audit">Marketing health check (₹14,999)</option><option value="sme_local">Local visibility plan (₹19,999)</option><option value="sme_sprint">Launch &amp; festive sprint (₹34,999)</option><option value="sme_advisor">Monthly advisor (₹39,999/month)</option></optgroup>
+              <optgroup label="Agencies"><option value="agency">Agency cover by the day (from ₹15,000/day)</option><option value="agency_sprint">Agency pitch sprint (₹70,000)</option><option value="agency_interim">Agency interim account lead (₹1,20,000/month)</option></optgroup>
+              <optgroup label="Websites"><option value="web_ai">AI-built landing page (₹24,999)</option><option value="web_wp">WordPress site (₹39,999)</option><option value="web_shopify">Shopify starter store (₹59,999)</option><option value="web_refresh">Shopify store refresh (₹34,999)</option><option value="web_care">Website care plan (₹7,999/month)</option></optgroup>
+              <optgroup label="Creative"><option value="cr_brand">Logo &amp; brand kit (₹24,999)</option><option value="cr_social">Monthly social creatives (₹29,999/month)</option><option value="cr_ads">Ad creative pack (₹39,999)</option></optgroup>
+            </select><small class="hint" id="f-need-hint">Pick the closest. “Not sure yet” is fine; we’ll work it out on the call.</small></div>
           <div class="field"><label for="f-budget">Budget for my fee</label>
             <select id="f-budget" name="budget"><option value="">Choose one (optional)</option><option>Under ₹15,000</option><option>₹15,000 – ₹40,000</option><option>₹40,000 – ₹75,000</option><option>₹75,000 – ₹1,50,000</option><option>₹1,50,000 – ₹3,00,000</option><option>₹3,00,000+</option><option>Not sure yet</option></select></div>
-          <div class="field"><label for="f-phone">WhatsApp number <span class="opt">(optional)</span></label><input id="f-phone" type="tel" name="whatsapp" autocomplete="tel" inputmode="tel"></div>
+          <div class="field"><label for="f-phone">WhatsApp number <span class="opt">(optional)</span></label><input id="f-phone" type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="With country code, e.g. +44, +971, +91"></div>
           <div class="field full"><label for="f-what">What’s the goal, and what’s in the way? <span class="opt">(optional)</span></label><textarea id="f-what" name="brief" placeholder="A launch date, a sales target, a campaign that isn’t working. A line or two is plenty."></textarea></div>
           <div class="form-foot">
-            <button class="btn btn-sun" type="submit" id="f-send">Send</button>
+            <button class="btn btn-sun" type="submit" id="f-send">Send my note</button>
             <small>Goes straight to me, not a sales team. I reply within one working day. No spam, ever.</small>
           </div>
         </form>
@@ -972,7 +980,7 @@ textarea{min-height:8rem;resize:vertical}
     send.disabled=true; send.textContent='Sending…';
     try{ sessionStorage.setItem('pj_lead','1'); }catch(e){}
   });
-  addEventListener('pageshow', function(){ send.disabled=false; send.textContent='Send'; });
+  addEventListener('pageshow', function(){ send.disabled=false; send.textContent='Send my note'; });
 })();
 </script>
 </body>

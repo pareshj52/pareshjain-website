@@ -2,6 +2,12 @@
 
 One focused improvement per week, shipped as a PR for Paresh to approve. Read this before changing anything so earlier work is not redone or undone.
 
+## 2026-11-18 — Enquiry form easier to finish (weekly improvement)
+
+- **What:** The "What do you need?" dropdown (22 packages in one flat list) is now grouped under the same six headings as the "Ways to work with me" tabs (Brands & startups, D2C, Small businesses, Agencies, Websites, Creative). "Not sure yet: a free review call" moved to the top. The two main offers and agency options now show their starting price (taken from the page). Labels stay clear when collapsed (e.g. "D2C agency & ads audit"). Short hint under the field: "Pick the closest. 'Not sure yet' is fine". WhatsApp field placeholder asks for the country code (+44, +971, +91). Button "Send" → "Send my note". Option values are unchanged, so `?need=` links, package "Enquire" buttons and the enquiry email all work as before.
+- **Why:** 0 real enquiries and 0 call bookings in the last 28 days (only Paresh's own test submissions on 11 Nov). The one required choice in the form was the hardest part: a 23-row list on a phone, with the safe "not sure" answer hidden at the bottom. International cold-email visitors also had no hint to include a country code.
+- **How to judge:** GA4 `form_start` vs `generate_lead` (thanks page) ratio for 2–4 weeks after merge; count "New enquiry from pareshjain.com" emails; check how many choose "Not sure yet".
+
 ## 2026-11-17 — Credibility line in the hero + hero CTA no longer hidden behind the name
 
 - **What:** Added one proof line under the hero headline (desktop and mobile): "11+ years at WPP/VML, FCB Kinnect, Schbang and Cheil on Amazon, Bata, Ford and Honda" (facts already on the page). Moved the desktop hero text block up slightly (top 31% → 25%) and put it above the big "Paresh Jain" marquee (`z-index:2`) so the "Free 30-min call" orb is no longer partly covered on 1280×720 / 1366×768 laptop screens.
